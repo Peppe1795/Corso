@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    background: linear-gradient(120deg,#bf14a387, #eba20ffb);
+    margin: 0;
+    padding: 5em;
+    
+    font-family: 'Roboto', sans-serif;
+}
+.topimage{
+    text-align: center;
+}
+
+#topdescription {
+    color: blue;
+    background-color: white;
+    height: 3em;
+    text-align: center;
+ }
+
+.titolo p {
+font-weight: 10em;
+
+}
+.media {
+    text-align: center;
+}
+
+footer {
+    border-left: 5px solid yellow;
+}
+#featured {
+    color: red;
+}
+
+.ingredienti {
+    text-align: left;
+}
