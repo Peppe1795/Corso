@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+html, body {
+    margin: 0 12px;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('../img/sfondo.png');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    text-align: center;
+    background: linear-gradient(180deg, #004296, #0a2632);
+    box-shadow: 1px 1px 1px 1px #000000, 1px 1px 1px 1px transparent; 
+    
+}
+header a:hover {
+    color: red;
+}
+main {
+    box-shadow: 1px 1px 1px 1px #000000, 1px 1px 1px 1px transparent; 
+    background-color: white;
+}
+
+ul {
+    list-style-type: none;
+    }
+
+    strong {
+   color:  #a02571;
+}
+span {
+    background-color: rgb(198, 194, 194);
+    border-radius: 5px;
+}
+
+h3 {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+iframe {
+    border-radius: 20px;
+}
+caption {
+    font-weight: bold;
+    font-style: italic;
+}
+thead {
+    background-color: #3f6bca;
+}
+
+.forma {
+    background-color:  #e3e3e3;
+}
+button {
+    background-color: #3f6bca;
+    color: white;
+}
+input {
+  border-style: hidden;
+}
+footer {
+    text-align: center;
+    background: linear-gradient(180deg, #004296, #0a2632);
+    box-shadow: 1px 1px 1px 1px #000000, 1px 1px 1px 1px transparent;
+}
+footer a {
+    text-decoration: none;
+}
+table {
+ text-align: center;
+}
+tr:nth-child(even) {background: #e3e3e3}
+
+.forma h2 {
+    text-align: center;
+}
+aside {
+    background-color: white;
+}
+aside h2 {
+    text-align: center;
+}
+
+.finale {
+    line-height: 0.1em;
+}
+.destra {
+    text-align: right;
+}
