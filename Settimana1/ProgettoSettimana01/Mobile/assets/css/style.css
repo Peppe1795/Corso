@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65em;
+    color: #393d41;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1em;
+    color: #25a2c3;
+    margin: 0;
+    padding-top: 20px;
+}
+.pad {
+padding-top: 80px;
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5em;
+    color: #25a2c3;
+    margin: 0;
+}
+header {
+    background-color: black;
+    height: 4em;
+}
+
+.logo img {
+    width: 150px;
+    margin-top: 1em;
+}
+.principale {
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+}
+
+button {
+    background-color: #f04c2f;
+    font-family: 'Montserrat', sans-serif;
+    border-style: hidden;
+    font-weight: bold;
+    color: white;
+    width: 125px;
+    height: 35px;
+    border-radius: 4px 4px 4px 4px;
+    margin-bottom: 3em;
+}
+button a {
+    color: white;
+    text-decoration: none;
+}
+.laptop {
+    width: 300px;
+    height: 300px;
+    border-radius:999em;   
+  -moz-border-radius:999em; 
+  -webkit-border-radius:999em;
+    -o-border-radius: 999em;  
+}
+
+.article3 {
+    padding-bottom: 20px;
+}
+
+.citazione {
+    background-color: #e22d0e;
+    color: white;
+    height: 465px;
+}
+
+.citazione h2 {
+    color:white;
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+cite {
+    padding-top: 25px;
+    margin-bottom: 25px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+span {
+    font-size: 1.5em;
+}
+
+.box {
+    border: 1px solid #dee1e3 ;
+    margin: 3em 1em;
+}
+.image1 img {
+    width: 100%;
+    height: 100%;
+object-fit: cover;
+}
+
+footer {
+    background-color: #25a2c3;
+    color: white;
+}
+
+footer h2 {
+    color: white;
+}
+footer a {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.fa-phone {
+    color: white;
+}
+
+hr {
+    width: 50%;
+}
