@@ -14,7 +14,7 @@ REGOLE
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 document.getElementById('titolo').innerHTML = 'Esercizi Javascript';
-document.getElementById('testo').innerHTML = '<ul><li> <b> String</b> = Testo tra apici in cui posso inserire numeri e lettere </li><li><b>Number</b> = Dato numerio cioè posso inserire solo numeri</li><li><b>Boolean</b> = Questo dato puo assumere solo i valori di vero o falso</li><li><b>Date</b> = Questo dato definisce ora e la data</li><li><b>Null</b> = Indica l\'assenza intenzionale di un valore ad una variabile che ho assegnato</li><li><b>Undefined</b> = Indica una variabile a cui non è sato asseganto un valore oppure non è stata proprio definita</li></ul>';
+document.getElementById('testo').innerHTML = '<ul><li> <b> String</b> = Testo tra apici in cui posso inserire numeri e lettere Es. = \'Stringa\' </li><li><b>Number</b> = Dato numerio cioè posso inserire solo numeri Es. = 1, 2, 3 ecc (compresi decimali)</li><li><b>Boolean</b> = Questo dato puo assumere solo i valori di vero o falso Es. = True o False</li><li><b>Date</b> = Questo dato definisce ora e la data</li><li><b>Null</b> = Indica l\'assenza intenzionale di un valore ad una variabile che ho assegnato</li><li><b>Undefined</b> = Indica una variabile a cui non è sato asseganto un valore oppure non è stata proprio definita</li></ul>';
 
 /* ESERCIZIO 2
  Crea una variable chiamata "name" e assegna ad essa il tuo nome, sotto forma di stringa.
@@ -58,7 +58,7 @@ console.log(name);
 document.getElementById('cognome').innerHTML = name;
 
 const pantera = 'Pantera';
-pantera = 'Giraffa';
+//pantera = 'Giraffa';
 console.log(pantera);
 document.getElementById('costante').innerHTML = pantera;
 /* ESERCIZIO 6
@@ -83,9 +83,9 @@ var name1 = 'john';
 var name2 = 'John';
 console.log(name1 != name2);
 
-if (name2 == name2.toLocaleLowerCase()) {
-  document.write('Le stringhe sono diverse');
+if (name1 === name2.toLowerCase()) {
 }else {
-  name1 == name2
   document.write('Le stringhe sono uguali');
-}
+  console.log(name1 === name2);
+ }
+ 
