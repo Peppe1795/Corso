@@ -24,7 +24,7 @@ document.getElementById('testo').innerHTML = '<ul><li> <b> String</b> = Testo tr
 
 var name = 'Giuseppe';
 console.log(name);
-document.getElementById('cognome').innerHTML = name
+document.getElementById('cognome').innerHTML = name;
 
 /* ESERCIZIO 3
  Scrivi il codice necessario ad effettuare un addizione (una somma) dei numeri 12 e 20.
@@ -55,8 +55,12 @@ document.getElementById('incognita').innerHTML = x;
 
 name = 'Petrucci';
 console.log(name);
-document.getElementById('cognome').innerHTML = name
+document.getElementById('cognome').innerHTML = name;
 
+const pantera = 'Pantera';
+pantera = 'Giraffa';
+console.log(pantera);
+document.getElementById('costante').innerHTML = pantera;
 /* ESERCIZIO 6
  Esegui una sottrazione tra i numeri 4 e la variable "x" appena dichiarata (che contiene il numero 12).
 */
