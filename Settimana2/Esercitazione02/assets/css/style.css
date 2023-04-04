@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html, body {
+    margin: 2%;
+    background-color: cornflowerblue;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: yellow;
+    text-shadow: 3px 3px blueviolet;
+}
+
+.lista {
+    border: 1px solid green;
+}
+ 
+.addizione {
+    font-size: 3em;
+    color: red;
+    text-shadow: 2px 2px pink;
+}
+
+.dodici {
+    color: orange;
+    font-size: 3em;
+    text-shadow: 2px 2px rgb(19, 221, 22);
+}
+h2 {
+    text-shadow: 2px 2px #dbde14;
+    color: green;
+}
+
+.meno {
+    color: fuchsia;
+    font-size: 3em;
+    text-shadow: 2px 2px red;
+}
