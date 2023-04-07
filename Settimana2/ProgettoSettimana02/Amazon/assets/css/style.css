@@ -1,0 +1,142 @@
+html, body {
+    background-color: rgb(233, 237, 238);
+    text-align: center;
+    margin: 0;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 0.8rem;
+
+}
+
+header {
+    text-align: left;
+}
+
+.logo {
+    background-color: rgb(51, 67, 84);
+}
+
+.logo img {
+    width: 120px;
+    height: 42px;
+    padding-left: 23px;
+}
+
+.navigationbar {
+    background-color: rgb(53, 71, 91);
+    text-align: left;
+    color: white;
+}
+
+.navigationbar li {
+    display: inline;
+    list-style: none;
+    padding: 0 0.5em;
+}
+
+.navigationbar ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+main {
+    color:white;
+     margin: 0 20px;
+}
+
+.giftbar {
+    background-color: rgb(245, 102, 0);
+    margin: 15px 0;
+    padding: 5px 0;
+}
+
+.giftbar p{
+    padding: 2px 0;
+}
+
+
+#giftguide {
+background-image: url('../img/bg-image.png');
+background-size: 100% 100%;
+background-position: center;
+background-repeat: no-repeat;
+padding: 25px 0;
+}
+
+article {
+    margin-right: 30px;
+}
+
+.contenitore {
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    object-fit: cover;
+    margin: 15px 0;
+    padding: 15px;
+    text-align: left;
+}
+
+.contenitore img {
+border-radius: 20px;
+width: 188px;
+height: 238px;
+box-shadow:  8px 6px 13px 0px rgb(34, 60, 80, 0.2);
+}
+
+.img1 {
+    margin-right: 10px;
+}
+
+.img2 {
+    margin: 0 10px;
+}
+
+.img3 {
+    margin-left: 10px;
+}
+
+.shop {
+    color: black;
+    padding-bottom: 10px;
+}
+
+.shop h2, p {
+ display: inline;
+ 
+}
+
+.shop h2 {
+    font-weight: normal;
+}
+ .shop p {
+    color: rgb(53, 116, 140);
+    font-weight: bold;
+    padding-left: 10px;
+ }
+
+ .vr img {
+    width: 103.8%;
+    height: 250px;
+ }
+
+
+ aside {
+    background-color: rgb(54, 71, 89);
+padding: 10px 0;
+ }
+
+ aside a {
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+ }
+
+ footer {
+   background-color: rgb(34, 47, 63);
+   padding: 40px 0;
+ }
+
+ footer img {
+    width: 12%;
+    height: 12%;
+ }
