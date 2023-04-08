@@ -239,7 +239,7 @@ switch (true) {
 Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
 */
 
-for (let i=0; i < starWarsCharacters.length; i++) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
   const genere = starWarsCharacters[i];
   if (genere.gender === 'n/a') {
     genere.gender = 'robot';
@@ -262,11 +262,11 @@ console.log(`array prima ${characters}`)
 for (let i = 0; i < characters.length; i++) {
   const personaggi = characters[i];
 
-  for(let k = 0; k < femaleCharacters.length; k++) {
+  for (let k = 0; k < femaleCharacters.length; k++) {
     const personaggif = femaleCharacters[k];
 
-    if(personaggif.name == personaggi) {
-characters.splice(i, 1);
+    if (personaggif.name == personaggi) {
+      characters.splice(i, 1);
     }
   }
 }
@@ -274,3 +274,34 @@ console.log(`array dopo ${characters}`);
 /* EXTRA ESERCIZIO 10
 Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo
 */
+
+const selettoreCasuale = Math.floor(Math.random() * starWarsCharacters.length);
+const selettoreElemento = starWarsCharacters[selettoreCasuale];
+
+
+console.log('The found character name is:', selettoreElemento.name);
+
+if (selettoreElemento.gender === 'female') {
+	console.log('She is', selettoreElemento.height, 'cm tall');
+} else {
+	console.log('He is', selettoreElemento.height, 'cm tall');
+}
+
+if (
+	selettoreElemento.hair_color !== 'n/a' &&
+	selettoreElemento.hair_color !== 'none'
+) {
+	console.log('and has', selettoreElemento.hair_color, 'hair,');
+} else {
+	console.log('and bald,');
+}
+
+console.log('with', selettoreElemento.skin_color, 'skin.');
+
+var result = [];
+
+for (let prop in starWarsCharacters[0]) {
+    result.push(prop);
+}
+
+console.log(result);
