@@ -230,15 +230,18 @@ const movies = [
 
 //Soluzione
 
-var vecchio = () => {
-  for (let i = 0; i < movies.length; i++) {
-    let vec = parseInt(movies[i].Year);
-    Math.min(vec);
+var vecchio = (arr) => {
+  let antico = { Year: 2100 };
+  for (let i = 0; i < arr.length; i++) {
+    let vec = parseInt(arr[i].Year);
+    if (vec < antico.Year) {
+      antico = arr[i];
+    }
   }
-
+  return antico;
 }
 
-console.log(vecchio());
+console.log(vecchio(movies));
 
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.

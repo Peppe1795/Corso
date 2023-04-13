@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    body div,
+    footer {
+      padding: 1rem;
+    }
+
+    footer {
+      padding: 1rem;
+      background-color: black;
+      color: white;
+    }
+
+    .myHeading {
+      color: #FF00D6;
+    }
+
+    #image {
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h1>Questo è il titolo della pagina</h1>
+    <h2>Questo è il sottotitolo della pagina</h2>
+  </div>
+
+  <div>
+    <hr />
+
+    <ul id="firstList">
+      <li>1st</li>
+      <li>2nd</li>
+      <li>3rd</li>
+    </ul>
+
+    <ul id="secondList">
+      <li>1st</li>
+      <li>2nd</li>
+      <li>3rd</li>
+    </ul>
+
+    <a href="https://epicode.com/it/">Questo link porta al sito di Epicode</a>
+
+    <div>
+      <p>Questo testo è un placeholder per gli esercizi</p>
+    </div>
+
+  </div>
+
+  <div>
+    <p>Anche questo testo è per gli esercizi</p>
+    <h2 id="changeMyColor" style="color: #FF00D6">Apri questa pagina con VSCode per scoprire gli esercizi</h2>
+  </div>
+
+  <div id="tableArea"></div>
+
+  <footer>
+    <h3>DOM Manipulation is super <a
+        href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents">AWESOME!</a>
+    </h3>
+  </footer>
+  <script>
+    /* ESERCIZIO 1
+       Scrivi una funzione per cambiare il titolo della pagina in qualcos'altro
+    */
+
+    const changeTitle = function () {
+      document.querySelector('h1').innerHTML = 'Esercitazione JS DOM';
+    }
+
+    changeTitle();
+
+    /* ESERCIZIO 2
+       Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
+    */
+
+    const addClassToTitle = function () {
+      let calsse = document.querySelector('h1');
+      calsse.setAttribute('class', 'myHeading');
+    }
+
+    addClassToTitle();
+    //alternativa 
+    /* ESERCIZIO 3
+       Scrivi una funzione per che cambi il testo dei p figli di un div
+      */
+
+    const changePcontent = function () {
+      let cambioP = document.querySelectorAll('div p');
+      for (let i = 0; i < cambioP.length; i++) {
+        cambioP[i].innerText = 'Paragrafo cambiato'
+      }
+    }
+
+    changePcontent();
+
+    /* ESERCIZIO 4
+       Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
+      */
+
+    const changeUrls = function () {
+      let cambioLink = document.querySelectorAll('a:not(footer a)');
+      for (let i = 0; i < cambioLink.length; i++) {
+        cambioLink[i].setAttribute('href', 'https://www.google.com')
+      }
+    }
+
+    changeUrls();
+
+    /* ESERCIZIO 5
+       Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
+    */
+
+    const addToTheSecond = function () {
+      let lista = document.querySelector('#secondList');
+      let elementiLista = document.createElement('li');
+      elementiLista.innerHTML = 'Giuseppe';
+      lista.appendChild(elementiLista);
+    }
+
+    addToTheSecond();
+
+    /* ESERCIZIO 6
+       Scrivi una funzione che aggiunga un secondo paragrafo al primo div
+    */
+
+    const addParagraph = function () {
+      let divP = document.querySelector('div');
+      let nuovoP = document.createElement('p');
+      nuovoP.innerHTML = 'Questo è nuovo paragrafo';
+      divP.appendChild(nuovoP);
+    }
+
+    addParagraph();
+
+    /* ESERCIZIO 7
+       Scrivi una funzione che faccia scomparire la prima lista non ordinata
+    */
+
+    const hideFirstUl = function () {
+      let eliminaList = document.getElementById('firstList');
+      eliminaList.remove();
+    }
+
+    hideFirstUl();
+
+    /* ESERCIZIO 8 
+       Scrivi una funzione che renda verde il background di ogni lista non ordinata
+      */
+
+    const paintItGreen = function () {
+      let coloreFondo = document.querySelectorAll('ul');
+      for (let i = 0; i < coloreFondo.length; i++) {
+        coloreFondo[i].style.backgroundColor = 'green';
+      }
+    }
+
+    paintItGreen();
+
+    /* ESERCIZIO 9
+       Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
+      */
+
+    const makeItClickable = function () {
+      let lettera = document.querySelector('h1');
+      lettera.addEventListener('click', function () {
+        let letteraRimossa = lettera.textContent.slice(0, -1);
+        lettera.innerText = letteraRimossa;
+      });
+    }
+
+    makeItClickable();
+
+    /* ESERCIZIO 10
+       Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
+      */
+
+    const revealFooterLink = function () {
+      let fot = document.querySelector('footer');
+      fot.addEventListener('click', function () {
+        let linkFinale = document.querySelector('footer a');
+        let linkPop = linkFinale.getAttribute('href');
+        alert(linkPop);
+      });
+    }
+
+    revealFooterLink();
+
+    /* ESERCIZIO 11
+       Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
+       La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
+    */
+    var tabellaPosizione = document.getElementById('tableArea');
+    var tabella = document.createElement('table');
+    var thead = document.createElement('thead');
+    var tbody = document.createElement('tbody');
+    tabella.appendChild(thead);
+    tabella.appendChild(tbody);
+    tabellaPosizione.appendChild(tabella);
+
+    const generateTable = function () {
+      let riga1 = document.createElement('tr');
+      let titolo1 = document.createElement('th');
+      titolo1.innerHTML = 'Immagine';
+      let titolo2 = document.createElement('th');
+      titolo2.innerHTML = 'nome prodotto';
+      let titolo3 = document.createElement('th');
+      titolo3.innerHTML = 'quantità';
+      let titolo4 = document.createElement('th');
+      titolo4.innerHTML = 'prezzo';
+      riga1.appendChild(titolo1);
+      riga1.appendChild(titolo2);
+      riga1.appendChild(titolo3);
+      riga1.appendChild(titolo4);
+      thead.appendChild(riga1);
+      let riga2 = document.createElement('tr');
+      let rigaValore1 = document.createElement('td');
+      rigaValore1.innerHTML = `<img id = 'image' src = 'https://m.media-amazon.com/images/I/81yJf4K+L1L._AC_SY450_.jpg'/>`;
+      let rigaValore2 = document.createElement('td');
+      rigaValore2.innerHTML = 'Smartphone';
+      let rigaValore3 = document.createElement('td');
+      rigaValore3.innerHTML = 34;
+      let rigaValore4 = document.createElement('td');
+      rigaValore4.innerHTML = '€250';
+      riga2.appendChild(rigaValore1);
+      riga2.appendChild(rigaValore2);
+      riga2.appendChild(rigaValore3);
+      riga2.appendChild(rigaValore4);
+      tbody.appendChild(riga2);
+      let riga3 = document.createElement('tr');
+      let rigaValore5 = document.createElement('td');
+      rigaValore5.innerHTML = `<img id = 'image' src = 'https://m.media-amazon.com/images/I/61MRTh9xotL._AC_SX679_.jpg'/>`;
+      let rigaValore6 = document.createElement('td');
+      rigaValore6.innerHTML = 'Smartphone';
+      let rigaValore7 = document.createElement('td');
+      rigaValore7.innerHTML = 50;
+      let rigaValore8 = document.createElement('td');
+      rigaValore8.innerHTML = '€150';
+      riga3.appendChild(rigaValore5);
+      riga3.appendChild(rigaValore6);
+      riga3.appendChild(rigaValore7);
+      riga3.appendChild(rigaValore8);
+      tbody.appendChild(riga3);
+      let riga4 = document.createElement('tr');
+      let rigaValore9 = document.createElement('td');
+      rigaValore9.innerHTML = `<img id = 'image' src = 'https://www.tradeinn.com/f/13805/138054505/samsung-smartphone-galaxy-s21-5g-8gb-128gb-6.2.jpg'/>`;
+      let rigaValore10 = document.createElement('td');
+      rigaValore10.innerHTML = 'Smartphone';
+      let rigaValore11 = document.createElement('td');
+      rigaValore11.innerHTML = 25;
+      let rigaValore12 = document.createElement('td');
+      rigaValore12.innerHTML = '€120';
+      riga4.appendChild(rigaValore9);
+      riga4.appendChild(rigaValore10);
+      riga4.appendChild(rigaValore11);
+      riga4.appendChild(rigaValore12);
+      tbody.appendChild(riga4);
+      let riga5 = document.createElement('tr');
+      let rigaValore13 = document.createElement('td');
+      rigaValore13.innerHTML = `<img id = 'image' src = 'https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1661333885.70133010!500x500.png'/>`;
+      let rigaValore14 = document.createElement('td');
+      rigaValore14.innerHTML = 'Smartphone';
+      let rigaValore15 = document.createElement('td');
+      rigaValore15.innerHTML = 10;
+      let rigaValore16 = document.createElement('td');
+      rigaValore16.innerHTML = '€180';
+      riga5.appendChild(rigaValore13);
+      riga5.appendChild(rigaValore14);
+      riga5.appendChild(rigaValore15);
+      riga5.appendChild(rigaValore16);
+      tbody.appendChild(riga5);
+      let riga6 = document.createElement('tr');
+      let rigaValore17 = document.createElement('td');
+      rigaValore17.innerHTML = `<img id = 'image' src = 'https://tomatosmartphone.it/wp-content/uploads/2022/06/EU-IN_Green.png'/>`;
+      let rigaValore18 = document.createElement('td');
+      rigaValore18.innerHTML = 'Smartphone';
+      let rigaValore19 = document.createElement('td');
+      rigaValore19.innerHTML = 15;
+      let rigaValore20 = document.createElement('td');
+      rigaValore20.innerHTML = '€110';
+      riga6.appendChild(rigaValore17);
+      riga6.appendChild(rigaValore18);
+      riga6.appendChild(rigaValore19);
+      riga6.appendChild(rigaValore20);
+      tbody.appendChild(riga6);
+
+    }
+
+    generateTable();
+
+    /* ESERCIZIO 12
+       Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
+    */
+
+    const addRow = function (x, y, z, g) {
+      let riga7 = document.createElement('tr');
+      let rigaValore21 = document.createElement('td');
+      rigaValore21.innerHTML = `<img id = 'image' src = ${x}>`;
+      let rigaValore22 = document.createElement('td');
+      rigaValore22.innerHTML = `${y}`;
+      let rigaValore23 = document.createElement('td');
+      rigaValore23.innerHTML = z;
+      let rigaValore24 = document.createElement('td');
+      rigaValore24.innerHTML = `€${g}`;
+      riga7.appendChild(rigaValore21);
+      riga7.appendChild(rigaValore22);
+      riga7.appendChild(rigaValore23);
+      riga7.appendChild(rigaValore24);
+      tbody.appendChild(riga7);
+    }
+
+    addRow('https://data.wikomobile.com/documents/images/IT/dbd2f986d94529fc20c0864e2c5c978c.jpg', 'Nuovo modello', 15, 150);
+
+    /* ESERCIZIO 14
+      Crea una funzione che nasconda le immagini della tabella quando eseguita
+    */
+
+    const hideAllImages = function () {
+      let sparite = document.querySelectorAll('img');
+      sparite.forEach((element) => {
+        element.style.display = 'none';
+      });
+    }
+
+    //hideAllImages();
+
+    /* EXTRA ESERCIZIO 15
+      Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
+    */
+
+    const changeColorWithRandom = function () {
+      let arcobaleno = document.getElementById('changeMyColor');
+      arcobaleno.addEventListener('click', () => {
+        let colore1 = Math.round(Math.random() * 255);
+        let colore2 = Math.round(Math.random() * 255);
+        let colore3 = Math.round(Math.random() * 255);
+        let coloreRgb = `rgb(${colore1},${colore2},${colore3})`;
+        arcobaleno.style.userSelect = 'none';
+        arcobaleno.style.color = coloreRgb;
+      });
+    }
+
+    changeColorWithRandom();
+
+    /* EXTRA ESERCIZIO 16
+      Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
+    */
+
+    const deleteVowels = function () {
+      let vocali = document.querySelectorAll('h1,h2,h3,p,a,li,th,td');
+      vocali.forEach(
+        (element) =>
+        (element.innerText = [...element.innerText]
+          .filter((elmt) => {
+            elmt = elmt.toLowerCase();
+            return (
+              elmt !== 'e' &&
+              elmt !== 'a' &&
+              elmt !== 'i' &&
+              elmt !== 'o' &&
+              elmt !== 'u'
+            );
+          })
+          .join(''))
+      );
+    }
+
+   // deleteVowels();
+
+  </script>
+</body>
+
+</html>
