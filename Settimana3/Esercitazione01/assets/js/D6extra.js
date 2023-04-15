@@ -166,10 +166,18 @@ var average = (arr) => {
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 var longest = (arr) => {
-for (let i =0; i < arr.length; i++) {
-    
+let stringa = 0;
+let parola;
+arr.forEach((element) => {
+   if (element.length > stringa) {
+    stringa = element.length;
+    parola = element;
+   }
+});
+console.log(`Parola più lunga è ${parola}, lunghezza parola ${stringa}`)
 }
-}
+var stringaPiuLunga = ['Giuseppe', 'Francesco', 'Antonio', 'Luca', 'Andrea'];
+longest(stringaPiuLunga);
 
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
