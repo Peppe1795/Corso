@@ -36,49 +36,49 @@ h2 {
 .post1 {
   background-color: #f9fac8;
   transform: rotate(-7deg);
-  animation: stick 3s linear 0s 1;
+  animation: stick 3s linear 0s 1 backwards;
 }
 
 .post2 {
   background-color: #c2edc4;
   transform: rotate(5deg);
-  animation: stick 3s linear 3s 1;
+  animation: stick 3s linear 3s 1 backwards;
 }
 
 .post3 {
   background-color: #c7c7f5;
   transform: rotate(-6deg);
-  animation: stick 3s linear 6s 1;
+  animation: stick 3s linear 6s 1 backwards;
 }
 
 .post4 {
   background-color: #c2edc4;
   transform: rotate(10deg);
-  animation: stick 3s linear 9s 1;
+  animation: stick 3s linear 9s 1 backwards;
 }
 
 .post5 {
   background-color: #f9fac8;
   transform: rotate(-7deg);
-  animation: stick 3s linear 12s 1;
+  animation: stick 3s linear 12s 1 backwards;
 }
 
 .post6 {
   background-color: #c7c7f5;
   transform: rotate(-8deg);
-  animation: stick 3s linear 15s 1;
+  animation: stick 3s linear 15s 1 backwards;
 }
 
 .post7 {
   background-color: #f9fac8;
   transform: rotate(-6deg);
-  animation: stick 3s linear 18s 1;
+  animation: stick 3s linear 18s 1 backwards;
 }
 
 .post8 {
   background-color: #c2edc4;
   transform: rotate(3deg);
-  animation: stick 3s linear 21s 1;
+  animation: stick 3s linear 21s 1 backwards;
 }
 
 
