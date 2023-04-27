@@ -1,0 +1,272 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #752305;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav img {
+  width: 50px;
+}
+
+nav {
+  display: flex;
+  background-color: #fef7e2;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 50px 50px;
+  flex-wrap: wrap-reverse;
+  margin: 15px 10px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffdf7f;
+  border: none;
+  border-radius: 50px 50px;
+  padding: 20px;
+  color: #752305;
+  width: 150px;
+  height: 50px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+span {
+  font-size: 1em;
+  margin-left: 0.5em;
+}
+
+.bee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  order: 5;
+}
+
+.btn1 {
+  order: 1;
+}
+
+.btn2 {
+  order: 2;
+}
+
+.btn3 {
+  order: 3;
+}
+
+.btn4 {
+  order: 4;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  background-color: #fef7e2;
+  border-radius: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  justify-content: space-around;
+  margin: 20px 5px;
+}
+.card img {
+  border-radius: 30px 30px 0 0;
+  width: 100%;
+  height: auto;
+}
+
+.cardMiddle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+}
+
+.imgDescript h3 {
+  margin-bottom: 0;
+}
+
+.imgDescript p {
+  margin-top: 0;
+}
+
+.card button {
+  width: 170px;
+  height: auto;
+  padding: 10px;
+}
+
+.latest img {
+  width: 300px;
+  height: auto;
+}
+
+.latest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fef7e2;
+  border-radius: 30px 30px;
+  margin: 0 30px;
+}
+
+.ultimoTesto {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.ultimoTesto p {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 550px) {
+  nav {
+    border-radius: 0;
+    margin: 0;
+    height: 100px;
+  }
+
+  button {
+    width: 100px;
+    height: 40px;
+    margin: 2px;
+    padding: 10px;
+  }
+
+  .bee {
+    order: 2;
+  }
+
+  main {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #elimina {
+    display: none;
+  }
+
+  aside {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  aside h2 {
+    margin: 10px;
+  }
+
+  .latest {
+    align-items: flex-start;
+  }
+
+  .ultimoTesto {
+    align-items: flex-start;
+  }
+
+  .latest img {
+    width: 500px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  main {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-left: 15px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: auto;
+    width: 20%;
+  }
+
+  nav img {
+    width: 60px;
+    height: 50px;
+  }
+
+  .bee {
+    width: 150px;
+    height: 45px;
+  }
+
+  span {
+    font-size: 1.5em;
+    margin-left: 0.5em;
+  }
+
+  button {
+    width: 150px;
+    height: 45px;
+    margin: 15px 10px;
+  }
+
+  #elimina2 {
+    display: none;
+  }
+
+  .card {
+    width: 180px;
+  }
+
+  .imgDescript {
+    flex-direction: column;
+  }
+
+  article {
+    display: flex;
+    flex-direction: row;
+  }
+
+  aside {
+    flex-direction: column;
+    align-items:flex-start;
+    flex-wrap: wrap;
+  }
+
+  .latest {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ultimoTesto {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
