@@ -32,24 +32,25 @@ main {
 }
 
 .parole {
-  display: flex;
-  align-self: flex-end;
   color: #6a889c;
 }
 
 .prima {
   animation: wordAnimation 6s linear 0s 1;
   opacity: 0;
+  position: absolute;
 }
 
 .seconda {
   animation: wordAnimation 6s linear 6s 1;
   opacity: 0;
+  position: absolute;
 }
 
 .terza {
   animation: wordAnimation 6s linear 12s 1;
   opacity: 0;
+  position: absolute;
 }
 
 @keyframes wordAnimation {
