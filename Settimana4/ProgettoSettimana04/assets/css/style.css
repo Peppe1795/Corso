@@ -1,0 +1,376 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Spectral&display=swap");
+
+body {
+  line-height: 1.8em;
+  font-family: "Spectral", serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 100px;
+  background-color: #ffc017;
+  border: 1px solid black;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+li {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+button {
+  border: hidden;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+hr {
+  margin-bottom: 80px;
+}
+
+nav button {
+  margin-left: 10px;
+  padding: 10px 25px;
+  border-radius: 40px;
+}
+
+.principale {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffc017;
+  border: 1px solid black;
+}
+
+.title {
+  align-self: center;
+  margin-left: 200px;
+}
+
+.title h1 {
+  font-size: 2.8em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.title h2 {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+}
+
+.title button {
+  padding: 10px 40px;
+  border-radius: 40px;
+}
+.secondaria {
+  margin: 0 auto;
+  margin-left: 10%;
+  width: 80%;
+  padding: 2em;
+}
+
+.trading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.containerArticle {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 5px;
+  gap: 20px;
+}
+
+article {
+  display: flex;
+  width: 30%;
+  margin-bottom: 40px;
+}
+
+.numero {
+  font-weight: bold;
+  color: lightgray;
+  font-size: 2em;
+  font-family: "Roboto", sans-serif;
+}
+
+.contentArticle {
+  margin-left: 30px;
+}
+
+.tomCooper {
+  display: flex;
+  align-items: center;
+}
+
+.tomCooper p {
+  margin-left: 10px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+article h3 {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+span {
+  color: grey;
+}
+
+.star p {
+  color: grey;
+  font-size: 0.8em;
+}
+
+.tomCooper img {
+  border-radius: 50px;
+}
+
+.star {
+  display: flex;
+  align-items: center;
+}
+
+.containerBottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.articleBottom {
+  display: flex;
+  align-items: center;
+  width: 800px;
+}
+
+.bookmark {
+  margin-left: 250px;
+}
+
+.imgBotom {
+  margin-left: 70px;
+  width: 250px;
+  height: auto;
+}
+
+.sectBottom {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.sectBottom h2 {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.sectBottom h3 {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 500px;
+  align-content: center;
+}
+
+.sticky {
+  position: sticky;
+  top: 107px;
+}
+
+.linkAside {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid gray;
+  margin: 10px 0;
+}
+
+.linkAside a {
+  font-size: 1.2em;
+  text-decoration: none;
+  border: 0.5px solid grey;
+  padding: 5px;
+  text-align: center;
+  margin: 5px;
+  color: gray;
+}
+
+aside ul {
+  color: gray;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+aside li {
+  font-size: 1.2em;
+  padding: 10px;
+}
+
+aside li:hover {
+  cursor: pointer;
+}
+
+.back {
+  background-color: lightgray;
+  border-radius: 20px;
+  padding: 2px 5px;
+}
+
+.scroller {
+  transition: background-color 300ms linear;
+}
+
+.bianco {
+  background-color: white;
+}
+
+.green {
+  background-color: #1a8917;
+}
+
+.sparizione {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    margin: 20px;
+  }
+  article {
+    width: 48%;
+  }
+
+  .tomCooper p {
+    font-size: 0.7em;
+  }
+
+  article h3 {
+    font-size: 0.8em;
+  }
+
+  .star p {
+    font-size: 0.7em;
+  }
+
+  .sectBottom {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  aside {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 40px;
+  }
+
+  hr {
+    margin-bottom: 40px;
+  }
+
+  .linkAside {
+    padding-bottom: 30px;
+  }
+
+  .linkAside a {
+    font-size: 1em;
+  }
+
+  aside li {
+    font-size: 1em;
+  }
+
+  .imgBotom {
+    width: 150px;
+    margin: 20px;
+  }
+
+  .articleBottom {
+    justify-content: space-between;
+  }
+
+  .sectBottom h2 {
+    font-size: 1.1em;
+  }
+
+  .sectBottom h3 {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 490px) {
+    .m {
+        display: none;
+    }
+
+    header {
+        padding: 15px 15px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .title {
+        padding: 50px 20px;
+        line-height: 1em;
+    }
+
+    .title h2 {
+        font-size: 1.1em;
+    }
+
+    .secondaria {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 0;
+    }
+    
+    article {
+        width: 100%;
+    }
+
+    .numero {
+        font-size: 1em;
+    }
+
+    .sectBottom h2 {
+        font-size: 1em;
+      }
+      
+      .sectBottom h3 {
+        font-size: 0.8em;
+      }
+
+      .articleBottom {
+        justify-content: flex-start;
+      }
+
+      .imgBotom {
+        width: 100px;
+      }
+}
