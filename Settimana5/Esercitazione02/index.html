@@ -19,6 +19,21 @@
             height: 80px;
         }
 
+        .item {
+    position:relative;
+    display:inline-block;
+}
+.notify-badge{
+    position: absolute;
+    right:-20px;
+    background:red;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color:white;
+    padding:5px 10px;
+    font-size:20px;
+}
+
         .image {
             width: 500px;
         }
@@ -108,7 +123,7 @@
                         aria-controls="multiCollapseExample1 multiCollapseExample2">Nascondi sezione</button>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3 ">
-                    <div class="card border-2 border-info">
+                    <div class="card border-2 border-info h-100">
                         <div class="collapse multi-collapse show" id="multiCollapseExample1">
                             <img src="https://a.cdn-hotels.com/gdcs/production191/d1300/c8bfd81c-2932-4411-a7a3-5eabfc30664b.jpg?impolicy=fcrop&w=800&h=533&q=medium"
                                 class="card-img-top" alt="Budapest">
@@ -124,7 +139,7 @@
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-3 ">
-                    <div class="card border-2 border-info">
+                    <div class="card border-2 border-info h-100">
                         <div class="collapse multi-collapse show" id="multiCollapseExample1">
                             <img src="https://siviaggia.it/wp-content/uploads/sites/2/2016/09/cosa-vedere-napoli.jpg"
                                 class="card-img-top" alt="Napoli">
@@ -140,7 +155,7 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-4 col-lg-3">
-                    <div class="card border-2 border-info">
+                    <div class="card border-2 border-info h-100">
                         <div class="collapse multi-collapse show" id="multiCollapseExample1">
                             <img src="https://i0.wp.com/homeoftravel.de/wp-content/uploads/2021/11/Stadtviertel-Jordaan-in-Amsterdam.jpeg?fit=5095%2C3397&ssl=1"
                                 class="card-img-top" alt="Amsterdam">
@@ -156,8 +171,8 @@
                     </div>
                 </div>
                 <div class="col-6 d-md-none d-lg-block col-lg-3">
-                    <div class="card border-2 border-info show">
-                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card border-2 border-info h-100">
+                        <div class="collapse multi-collapse show" id="multiCollapseExample1">
                             <img src="https://travel.thewom.it/content/uploads/sites/4/2020/02/shutterstock_2140305281-704x528.jpg"
                                 class="card-img-top" alt="copenaghen">
                             <div class="card-body">
@@ -180,9 +195,10 @@
                         aria-controls="multiCollapseExample1 multiCollapseExample2">Nascondi sezione</button>
                 </div>
                 <div class="col-6 col-md-6 col-lg-4 col-xl-2  ">
-                    <div class="card shadow">
-                        <div class="collapse multi-collapse show" id="multiCollapseExample1">
-                            <img src="https://a.cdn-hotels.com/gdcs/production191/d1300/c8bfd81c-2932-4411-a7a3-5eabfc30664b.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+                    <div class="card shadow h-100">
+                        <div class="collapse multi-collapse show notifica" id="multiCollapseExample1">
+                            <span class="badge badge-secondary notifica1">HOT</span>
+                            <img class="w-100 rounded-top" src="https://a.cdn-hotels.com/gdcs/production191/d1300/c8bfd81c-2932-4411-a7a3-5eabfc30664b.jpg?impolicy=fcrop&w=800&h=533&q=medium"
                                 class="card-img-top" alt="Budapest">
                             <div class="card-body">
                                 <h5 class="card-title">Budapest</h5>
@@ -196,8 +212,9 @@
                 </div>
 
                 <div class="col-6 col-md-6 col-lg-4 col-xl-2 ">
-                    <div class="card shadow">
-                        <div class="collapse multi-collapse show" id="multiCollapseExample1">
+                    <div class="card shadow h-100">
+                        <div class="collapse multi-collapse show notifica" id="multiCollapseExample1">
+                            <span class="badge badge-secondary notifica1">HOT</span>
                             <img src="https://siviaggia.it/wp-content/uploads/sites/2/2016/09/cosa-vedere-napoli.jpg"
                                 class="card-img-top" alt="Napoli">
                             <div class="card-body">
@@ -212,8 +229,9 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-6 col-lg-4 col-xl-2">
-                    <div class="card shadow">
-                        <div class="collapse multi-collapse show" id="multiCollapseExample1">
+                    <div class="card shadow h-100">
+                        <div class="collapse multi-collapse show notifica" id="multiCollapseExample1">
+                            <span class="badge badge-secondary notifica1">HOT</span>
                             <img src="https://i0.wp.com/homeoftravel.de/wp-content/uploads/2021/11/Stadtviertel-Jordaan-in-Amsterdam.jpeg?fit=5095%2C3397&ssl=1"
                                 class="card-img-top" alt="Amsterdam">
                             <div class="card-body">
@@ -228,8 +246,9 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-6 col-lg-4 col-xl-2">
-                    <div class="card shadow">
-                        <div class="collapse  multi-collapse show" id="multiCollapseExample1">
+                    <div class="card shadow h-100">
+                        <div class="collapse  multi-collapse show notifica" id="multiCollapseExample1">
+                            <span class="badge badge-secondary notifica1">HOT</span>
                             <img src="https://travel.thewom.it/content/uploads/sites/4/2020/02/shutterstock_2140305281-704x528.jpg"
                                 class="card-img-top" alt="copenaghen">
                             <div class="card-body">
@@ -243,8 +262,9 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-6 col-lg-4 col-xl-2">
-                    <div class="card shadow">
-                        <div class="collapse multi-collapse show" id="multiCollapseExample1">
+                    <div class="card shadow h-100">
+                        <div class="collapse multi-collapse show notifica" id="multiCollapseExample1">
+                            <span class="badge badge-secondary notifica1">HOT</span>
                             <img src="https://viaggin.com/wp-content/uploads/sagrada-familia-a-barcellona-in-spagna.jpg"
                                 class="card-img-top" alt="Barcellona">
                             <div class="card-body">
@@ -259,8 +279,9 @@
                     </div>
                 </div>
                 <div class="col-6 col-md-6 col-lg-4 col-xl-2">
-                    <div class="card shadow">
-                        <div class="collapse multi-collapse show" id="multiCollapseExample1">
+                    <div class="card shadow h-100">
+                        <div class="collapse multi-collapse show notifica" id="multiCollapseExample1">
+                            <span class="badge badge-secondary notifica1">HOT</span>
                             <img src="https://siviaggia.it/wp-content/uploads/sites/2/2015/10/010-praia-dona-ana-t.jpg"
                                 class="card-img-top" alt="Algarve">
                             <div class="card-body">
