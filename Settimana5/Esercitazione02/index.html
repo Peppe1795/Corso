@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <style>
+        h1,
+        h2,
+        h3 {
+            font-weight: bold;
+        }
+
+        .logo {
+            width: 100px;
+            height: 80px;
+        }
+
+        .image {
+            width: 500px;
+        }
+
+        .lastimg {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .user {
+            width: 120px;
+        }
+
+        .btn1 {
+            background-color: white;
+        }
+
+        .btn1:hover {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-info">
+            <div class="container-fluid">
+                <img class="rounded-circle logo"
+                    src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/airflight-travel-agency-logo-design-template-621158165bc16e37aec8be7e13fdf4f1_screen.jpg?ts=1603864204"
+                    alt="Logo travel" />
+                <button class="navbar-toggler btn1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#saldi">Saldi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#Welcom">Welcome Summer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#last">Last Minute</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#recens">Recensioni</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row m-5">
+                <div class="col-12 text-center bg-light rounded shadow p-5">
+                    <h1 class="mb-5 text-primary">Travello Go</h1>
+                    <hr />
+                    <h2 class="mb-5 text-danger">To travel is to live</h2>
+                    <p class="fst-italic">
+                        Cerchi una vacanza completamente organizzata e senza pensieri? Su
+                        Travello.com trovi le migliori offerte viaggi e pacchetti
+                        vacanze: non devi fare altro che selezionare l’aeroporto di
+                        partenza, scegliere dove andare e indicare data di partenza e
+                        ritorno. Su Travello.com ti basta solo un acconto per prenotare
+                        il tuo viaggio, scopri come! Inoltre, durante il processo di
+                        prenotazione, potrai scegliere se aggiungere auto a noleggio,
+                        assicurazione e transfer. E dopo? Non ti resta che fare i bagagli
+                        e partire.
+                    </p>
+                    <button class="btn btn-info btn-lg text-white fw-bold" type="button">
+                        Prenota ora
+                    </button>
+                </div>
+            </div>
+
+            <div class="row m-5">
+                <div class="col-12 d-flex justify-content-between">
+                    <h2 id="saldi">Saldi</h2>
+                    <button class="btn text-info" type="button" data-bs-toggle="collapse"
+                        data-bs-target=".multi-collapse" aria-expanded="false"
+                        aria-controls="multiCollapseExample1 multiCollapseExample2">Nascondi sezione</button>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3 ">
+                    <div class="card border-2 border-info">
+                        <div class="collapse multi-collapse show" id="multiCollapseExample1">
+                            <img src="https://a.cdn-hotels.com/gdcs/production191/d1300/c8bfd81c-2932-4411-a7a3-5eabfc30664b.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+                                class="card-img-top" alt="Budapest">
+                            <div class="card-body">
+                                <h5 class="card-title">Budapest</h5>
+                                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi
+                                    accusamus dolores facilis hic? At reprehenderit eos animi in aperiam commodi quaerat
+                                    similique odio. Assumenda voluptate iusto quia velit, dolores ipsam!.</p>
+                                <button type="button" class="btn btn-info fw-bold">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-3 ">
+                    <div class="card border-2 border-info">
+                        <div class="collapse multi-collapse show" id="multiCollapseExample1">
+                            <img src="https://siviaggia.it/wp-content/uploads/sites/2/2016/09/cosa-vedere-napoli.jpg"
+                                class="card-img-top" alt="Napoli">
+                            <div class="card-body">
+                                <h5 class="card-title">Napoli</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+                                    dolor corporis quis, possimus quo sit ab quae eveniet repudiandae neque consequuntur
+                                    ex quas rerum aliquid voluptatibus aut quod cum porro. Lorem, ipsum dolor sit amet
+                                    consectetur adipisicing elit.</p>
+                                <button type="button" class="btn btn-info fw-bold">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="card border-2 border-info">
+                        <div class="collapse multi-collapse show" id="multiCollapseExample1">
+                            <img src="https://i0.wp.com/homeoftravel.de/wp-content/uploads/2021/11/Stadtviertel-Jordaan-in-Amsterdam.jpeg?fit=5095%2C3397&ssl=1"
+                                class="card-img-top" alt="Amsterdam">
+                            <div class="card-body">
+                                <h5 class="card-title">Amsterdam</h5>
+                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus,
+                                    architecto. Quae libero neque repellat, consectetur harum recusandae sapiente dicta
+                                    provident distinctio veritatis! Recusandae dolores perspiciatis, rerum architecto
+                                </p>
+                                <button type="button" class="btn btn-info fw-bold">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 d-md-none d-lg-block col-lg-3">
+                    <div class="card border-2 border-info show">
+                        <div class="collapse multi-collapse" id="multiCollapseExample1">
+                            <img src="https://travel.thewom.it/content/uploads/sites/4/2020/02/shutterstock_2140305281-704x528.jpg"
+                                class="card-img-top" alt="copenaghen">
+                            <div class="card-body">
+                                <h5 class="card-title">Copenaghen</h5>
+                                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+                                    eaque maiores nam dignissimos error nobis modi aperiam consequuntur saepe vitae, qui
+                                    debitis, sequi illum sit. Fugit minus veritatis soluta totam!</p>
+                                <button type="button" class="btn btn-info fw-bold">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row m-5">
+                <div class="col-12 d-flex justify-content-between">
+                    <h2 id="Welcom">Welcome Summer</h2>
+                    <button class="btn text-info" type="button" data-bs-toggle="collapse"
+                        data-bs-target=".multi-collapse" aria-expanded="false"
+                        aria-controls="multiCollapseExample1 multiCollapseExample2">Nascondi sezione</button>
+                </div>
+                <div class="col-6 col-md-6 col-lg-4 col-xl-2  ">
+                    <div class="card shadow">
+                        <div class="collapse multi-collapse show" id="multiCollapseExample1">
+                            <img src="https://a.cdn-hotels.com/gdcs/production191/d1300/c8bfd81c-2932-4411-a7a3-5eabfc30664b.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+                                class="card-img-top" alt="Budapest">
+                            <div class="card-body">
+                                <h5 class="card-title">Budapest</h5>
+                                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi
+                                    accusamus dolores facilis hic? At reprehenderit eos animi in aperiam commodi quaerat
+                                    similique odio. Assumenda voluptate iusto quia velit, dolores ipsam!.</p>
+                                <button type="button" class="btn btn-info fw-bold">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-6 col-lg-4 col-xl-2 ">
+                    <div class="card shadow">
+                        <div class="collapse multi-collapse show" id="multiCollapseExample1">
+                            <img src="https://siviaggia.it/wp-content/uploads/sites/2/2016/09/cosa-vedere-napoli.jpg"
+                                class="card-img-top" alt="Napoli">
+                            <div class="card-body">
+                                <h5 class="card-title">Napoli</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+                                    dolor corporis quis, possimus quo sit ab quae eveniet repudiandae neque consequuntur
+                                    ex quas rerum aliquid voluptatibus aut quod cum porro. Lorem, ipsum dolor sit amet
+                                </p>
+                                <button type="button" class="btn btn-info fw-bold">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-4 col-xl-2">
+                    <div class="card shadow">
+                        <div class="collapse multi-collapse show" id="multiCollapseExample1">
+                            <img src="https://i0.wp.com/homeoftravel.de/wp-content/uploads/2021/11/Stadtviertel-Jordaan-in-Amsterdam.jpeg?fit=5095%2C3397&ssl=1"
+                                class="card-img-top" alt="Amsterdam">
+                            <div class="card-body">
+                                <h5 class="card-title">Amsterdam</h5>
+                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus,
+                                    architecto. Quae libero neque repellat, consectetur harum recusandae sapiente dicta
+                                    provident distinctio veritatis! Recusandae dolores perspiciatis, rerum architecto
+                                </p>
+                                <button type="button" class="btn btn-info fw-bold">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-4 col-xl-2">
+                    <div class="card shadow">
+                        <div class="collapse  multi-collapse show" id="multiCollapseExample1">
+                            <img src="https://travel.thewom.it/content/uploads/sites/4/2020/02/shutterstock_2140305281-704x528.jpg"
+                                class="card-img-top" alt="copenaghen">
+                            <div class="card-body">
+                                <h5 class="card-title">Copenaghen</h5>
+                                <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
+                                    eaque maiores nam dignissimos error nobis modi aperiam consequuntur saepe vitae, qui
+                                    debitis, sequi illum sit. Fugit minus veritatis soluta totam!</p>
+                                <button type="button" class="btn btn-info fw-bold">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-4 col-xl-2">
+                    <div class="card shadow">
+                        <div class="collapse multi-collapse show" id="multiCollapseExample1">
+                            <img src="https://viaggin.com/wp-content/uploads/sagrada-familia-a-barcellona-in-spagna.jpg"
+                                class="card-img-top" alt="Barcellona">
+                            <div class="card-body">
+                                <h5 class="card-title">Barcellona</h5>
+                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus,
+                                    architecto. Quae libero neque repellat, consectetur harum recusandae sapiente dicta
+                                    provident distinctio veritatis! Recusandae dolores perspiciatis, rerum architecto
+                                </p>
+                                <button type="button" class="btn btn-info fw-bold">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-6 col-lg-4 col-xl-2">
+                    <div class="card shadow">
+                        <div class="collapse multi-collapse show" id="multiCollapseExample1">
+                            <img src="https://siviaggia.it/wp-content/uploads/sites/2/2015/10/010-praia-dona-ana-t.jpg"
+                                class="card-img-top" alt="Algarve">
+                            <div class="card-body">
+                                <h5 class="card-title">Algarve</h5>
+                                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus,
+                                    architecto. Quae libero neque repellat, consectetur harum recusandae sapiente dicta
+                                    provident distinctio veritatis! Recusandae dolores perspiciatis, rerum </p>
+                                <button type="button" class="btn btn-info fw-bold">Prenota</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-sm-none d-md-flex m-5">
+                <div class="col-12">
+                    <h2>Offerta del giorno</h2>
+                </div>
+                <div class="col-7">
+                    <img class="image shadow rounded"
+                        src="https://4tdjltzf4a01.b-cdn.net/w_768,h_436/49fxg4ua8q6r-amsterdam-canals-in-the-city-centre-with-a-beaufitul-sky.jpg"
+                        alt="Amsterdam">
+                </div>
+                <div class="col-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title m-0 fw-bold">Amsterdam Canals</h5>
+                            <p class="card-text text-black-50 font-monospace">15-02-2023 1-03-2023</p>
+                            <p class="text-black-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Veritatis, officiis deserunt beatae hic expedita repudiandae blanditiis, iure non at
+                                provident laboriosam vitae atque! Nostrum vitae temporibus corrupti eum blanditiis? Et?
+                            </p>
+                            <button type="button" class="btn btn-dark text-white fw-bold">Best offer <span
+                                    class="badge bg-danger">&#8364 350</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-5 justify-content-center ">
+            <div class="col-12 ">
+                <h2 id="last" class="ps-5">Last Minute</h2>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <img class="lastimg rounded shadow"
+                    src="https://travel.thewom.it/content/uploads/sites/4/2021/06/aurora-boreale.jpg"
+                    alt="Northern lights">
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <img class="lastimg rounded shadow"
+                    src="https://travel.thewom.it/content/uploads/sites/4/2021/06/aurora-boreale.jpg"
+                    alt="Northern lights">
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <img class="lastimg rounded shadow"
+                    src="https://travel.thewom.it/content/uploads/sites/4/2021/06/aurora-boreale.jpg"
+                    alt="Northern lights">
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <img class="lastimg rounded shadow"
+                    src="https://travel.thewom.it/content/uploads/sites/4/2021/06/aurora-boreale.jpg"
+                    alt="Northern lights">
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <img class="lastimg rounded shadow"
+                    src="https://travel.thewom.it/content/uploads/sites/4/2021/06/aurora-boreale.jpg"
+                    alt="Northern lights">
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+                <img class="lastimg rounded shadow"
+                    src="https://travel.thewom.it/content/uploads/sites/4/2021/06/aurora-boreale.jpg"
+                    alt="Northern lights">
+            </div>
+        </div>
+
+        <div class="row m-5 ">
+            <div class="col-12 text-center">
+                <h2 id="recens">Dicono di noi</h2>
+            </div>
+            <div class="card border-0 mb-3">
+                <div class="row ">
+                    <div class="col-md-2 text-center">
+                        <img class="user"
+                            src="https://us.123rf.com/450wm/tuktukdesign/tuktukdesign1608/tuktukdesign160800043/61010830-user-icon-mann-profil-gesch%C3%A4ftsmann-avatar-person-glyph-vektor-illustration.jpg"
+                            class="img-fluid rounded-start" alt="user">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="card-body">
+                            <h3 class="card-title">Username</h3>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit enim
+                                autem illo laboriosam aperiam rem, atque repellat placeat natus corrupti, tenetur facere
+                                commodi omnis sapiente, a vitae culpa libero voluptate. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Veritatis totam repudiandae nihil dolorem dolor? Et, nam!
+                                Fuga aliquid, dolorum rerum quae eaque libero cumque quidem et porro nam eveniet
+                                aperiam.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 mb-3">
+                    <div class="row ">
+                        <div class="col-md-2 text-center">
+                            <img class="user"
+                                src="https://us.123rf.com/450wm/tuktukdesign/tuktukdesign1608/tuktukdesign160800043/61010830-user-icon-mann-profil-gesch%C3%A4ftsmann-avatar-person-glyph-vektor-illustration.jpg"
+                                class="img-fluid rounded-start" alt="user">
+                        </div>
+                        <div class="col-md-10">
+                            <div class="card-body">
+                                <h3 class="card-title">Username</h3>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
+                                    enim autem illo laboriosam aperiam rem, atque repellat placeat natus corrupti,
+                                    tenetur facere commodi omnis sapiente, a vitae culpa libero voluptate. Lorem ipsum
+                                    dolor sit amet consectetur adipisicing elit. Veritatis totam repudiandae nihil
+                                    dolorem dolor? Et, nam! Fuga aliquid, dolorum rerum quae eaque libero cumque quidem
+                                    et porro nam eveniet aperiam.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-0 mb-3">
+                        <div class="row ">
+                            <div class="col-md-2 text-center">
+                                <img class="user"
+                                    src="https://us.123rf.com/450wm/tuktukdesign/tuktukdesign1608/tuktukdesign160800043/61010830-user-icon-mann-profil-gesch%C3%A4ftsmann-avatar-person-glyph-vektor-illustration.jpg"
+                                    class="img-fluid rounded-start" alt="user">
+                            </div>
+                            <div class="col-md-10">
+                                <div class="card-body">
+                                    <h3 class="card-title">Username</h3>
+                                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                        Suscipit enim autem illo laboriosam aperiam rem, atque repellat placeat natus
+                                        corrupti, tenetur facere commodi omnis sapiente, a vitae culpa libero voluptate.
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis totam
+                                        repudiandae nihil dolorem dolor? Et, nam! Fuga aliquid, dolorum rerum quae eaque
+                                        libero cumque quidem et porro nam eveniet aperiam.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+<button id="viaggi" type="button" class="btn btn-info text-white fw-bold w-25 text-center">Viaggi attivi</button>
+</div>
+            </div>
+            
+    </main>
+
+    <footer class="bg-dark text-center p-5">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label">Email:</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Message:</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info">Send message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-dark text-secondary border-2 border-secondary mb-5" data-bs-toggle="modal"
+            data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap">Conattaci</button>
+        <p class="text-white">&#169 All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
