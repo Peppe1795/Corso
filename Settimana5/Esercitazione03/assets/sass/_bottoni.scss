@@ -1,0 +1,8 @@
+@import "colori";
+
+@mixin buttonCustom($coloreFondo, $coloreText, $padding, $margin) {
+  background-color: $coloreFondo;
+  color: $coloreText;
+  padding: $padding;
+  margin: $margin;
+}

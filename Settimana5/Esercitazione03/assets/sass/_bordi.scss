@@ -1,0 +1,5 @@
+@mixin borderCustom($bordo, $radius, $shadow) {
+  border: $bordo;
+  border-radius: $radius;
+  box-shadow: $shadow;
+}

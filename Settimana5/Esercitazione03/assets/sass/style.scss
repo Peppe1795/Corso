@@ -1,0 +1,83 @@
+@import "bottoni";
+@import "colori";
+@import "font";
+@import "bordi";
+@import "animation";
+
+h1,
+h2,
+h3 {
+  @include fontCustom(bold, 1.8em, Lucida, rgb(252, 47, 81));
+}
+
+h3 {
+  margin-top: 0;
+}
+
+h1 {
+  @include titleBig;
+}
+
+nav img {
+  width: 100px;
+  height: auto;
+}
+
+.bottomImg img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+  margin: 10px;
+  @include borderCustom(none, 10px, 10px 10px 10px);
+}
+
+.headline {
+  background-color: $coloreBCK;
+  color: $coloreSecondario;
+  padding: 30px;
+}
+
+.btn1 {
+  @include buttonCustom($coloreblu, $coloreSecondario, 5px, 5px);
+  @include borderCustom(none, 5px, 0);
+  opacity: 1;
+  @include fadeIn(3s, linear, 6s, 1, backwards);
+  transition: all 1s linear 1s;
+  @include hoverCustom;
+}
+
+.btn2 {
+  @include buttonCustom($coloreOrange, $coloreNero, 5px, 5px);
+  @include borderCustom(none, 5px, 0);
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 1;
+  @include fadeIn(3s, linear, 9s, 1, backwards);
+  transition: all 1s linear 1s;
+  @include hoverCustom;
+}
+
+.btn3 {
+  @include buttonCustom($coloreVerde, $coloreSecondario, 5px, 5px);
+  @include borderCustom(none, 5px, 0);
+  padding-left: 20px;
+  padding-right: 20px;
+  opacity: 1;
+  @include fadeIn(3s, linear, 12s, 1, backwards);
+  transition: all 1s linear 1s;
+  @include hoverCustom;
+}
+
+.primo {
+  opacity: 1;
+  @include fadeIn(3s, linear, 0s, 1, backwards);
+}
+
+.secondo {
+  opacity: 1;
+  @include fadeIn(3s, linear, 3s, 1, backwards);
+}
+
+.terzo {
+    @include rotationMx(3s, linear, 15s, 1, backwards);
+}

@@ -1,0 +1,14 @@
+@mixin fontCustom($weight, $size, $family, $colorextx) {
+  font-weight: $weight;
+  font-family: $family;
+  color: $colorextx;
+  font-size: $size;
+}
+
+@mixin titleBig {
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: rgb(184, 13, 70);
+  font-size: 2.2em;
+}
