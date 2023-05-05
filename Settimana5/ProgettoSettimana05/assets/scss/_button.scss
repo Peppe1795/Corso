@@ -1,0 +1,8 @@
+@mixin buttonCustom($coloreFondo, $coloreText, $padding, $margin, $bordi, $radius2) {
+    background-color: $coloreFondo;
+    color: $coloreText;
+    padding: $padding;
+    margin: $margin;
+    border: $bordi;
+    border-radius: $radius2;
+  }

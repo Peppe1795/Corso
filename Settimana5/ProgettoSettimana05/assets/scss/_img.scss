@@ -1,0 +1,5 @@
+@mixin sizeImg($width, $radius, $border) {
+    width: $width;
+    border-radius: $radius;
+    border: $border;
+  }

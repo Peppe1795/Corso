@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+@import 'img';
+@import 'colori';
+@import 'font';
+@import 'button';
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    @include fontCustom(bold, $bianco, 2.2em);
+}
+
+h2{
+    @include fontCustom(bold, $nero, 1.8em); 
+    margin: 5px 0;
+}
+
+h4 {
+    @include fontCustom(bold, $nero, 1.2em);
+    margin: 0;
+}
+
+h5{
+    @include fontCustom(bold, $nero, 1.3em);
+}
+
+.icon1 {
+    border-radius: 300px;
+    background-color: $lightpink;
+    padding: 20px;
+    color: $iconColor;
+}
+
+.heroBottom{
+    margin-left: 10px
+}
+
+del {
+    color: $lightgrey;
+}
+
+.whiteBar{
+    background-color: $bianco;
+}
+
+.heroBottom p {
+    @include fontCustom(normal, $grey, 0.8em);
+}
+
+.navImg img {
+    @include sizeImg(25%, 50%, 0);
+    margin-left: 10px;
+}
+
+.heroSection {
+    background-color: $viola;
+}
+
+.heroSection p {
+    color: $violetto;
+}
+
+.btn1 {
+    @include buttonCustom($verde, $bianco, 15px, 5px, 0, 5px);
+    font-weight: bold;
+}
+
+.btn2 {
+    @include buttonCustom($bianco, $nero, 15px, 5px, 0, 5px);
+    font-weight: bold;
+}
+
+main {
+    background-color: $backgr;
+}
+
+.iconStars {
+    color: $gold;
+}
+
+span {
+    color: $lightgrey;
+}
+
+.card-body img {
+    @include sizeImg(15%, 300px, 0);
+}
+
+.bottomAlign p {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.bottomAlign i {
+   margin-left: 50%;
+}
+
+.bi-bar-chart-line-fill{
+    color: $viola;
+}
+
+.card {
+    height: 100%;
+}
+
+.iconNav{
+    background-color: $iconBk;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.btnNAv {
+  border: 2px solid $viola;
+}
+
+.ultimaLista  {
+margin-left: 20px;
+}

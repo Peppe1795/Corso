@@ -1,0 +1,5 @@
+@mixin fontCustom($weight, $colorextx, $size) {
+    font-weight: $weight;
+    color: $colorextx;
+    font-size: $size;
+  }

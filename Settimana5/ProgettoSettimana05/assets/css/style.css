@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-weight: bold;
+  color: white;
+  font-size: 2.2em;
+}
+
+h2 {
+  font-weight: bold;
+  color: black;
+  font-size: 1.8em;
+  margin: 5px 0;
+}
+
+h4 {
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+h5 {
+  font-weight: bold;
+  color: black;
+  font-size: 1.3em;
+}
+
+.icon1 {
+  border-radius: 300px;
+  background-color: #ffeeda;
+  padding: 20px;
+  color: #c28135;
+}
+
+.heroBottom {
+  margin-left: 10px;
+}
+
+del {
+  color: lightgrey;
+}
+
+.whiteBar {
+  background-color: white;
+}
+
+.heroBottom p {
+  font-weight: normal;
+  color: grey;
+  font-size: 0.8em;
+}
+
+.navImg img {
+  width: 25%;
+  border-radius: 50%;
+  border: 0;
+  margin-left: 10px;
+}
+
+.heroSection {
+  background-color: #7550fe;
+}
+
+.heroSection p {
+  color: #bba7ff;
+}
+
+.btn1 {
+  background-color: #1acb98;
+  color: white;
+  padding: 15px;
+  margin: 5px;
+  border: 0;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn2 {
+  background-color: white;
+  color: black;
+  padding: 15px;
+  margin: 5px;
+  border: 0;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+main {
+  background-color: #f5f4f8;
+}
+
+.iconStars {
+  color: #ffaa46;
+}
+
+span {
+  color: lightgrey;
+}
+
+.card-body img {
+  width: 15%;
+  border-radius: 300px;
+  border: 0;
+}
+
+.bottomAlign p {
+  margin: 0;
+  margin-left: 10px;
+}
+
+.bottomAlign i {
+  margin-left: 50%;
+}
+
+.bi-bar-chart-line-fill {
+  color: #7550fe;
+}
+
+.card {
+  height: 100%;
+}
+
+.iconNav {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.btnNAv {
+  border: 2px solid #7550fe;
+}/*# sourceMappingURL=style.css.map */
