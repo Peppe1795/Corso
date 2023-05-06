@@ -4,6 +4,7 @@
 @import 'colori';
 @import 'font';
 @import 'button';
+@import 'animation';
 
 body {
     font-family: 'Inter', sans-serif;
@@ -11,6 +12,7 @@ body {
 
 h1 {
     @include fontCustom(bold, $bianco, 2.2em);
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 
 h2{
@@ -28,9 +30,9 @@ h5{
 }
 
 .icon1 {
-    border-radius: 300px;
+    border-radius: 50%;
     background-color: $lightpink;
-    padding: 20px;
+    padding: 25px;
     color: $iconColor;
 }
 
@@ -46,17 +48,40 @@ del {
     background-color: $bianco;
 }
 
+.btnAvatar {
+    width: 25%
+}
+
+.dropMenu {
+    width: 200px;
+}
+
+.dropMenu li {
+    font-size: 1em;
+    font-weight: bold;
+}
+
 .heroBottom p {
     @include fontCustom(normal, $grey, 0.8em);
 }
 
 .navImg img {
-    @include sizeImg(25%, 50%, 0);
-    margin-left: 10px;
+    @include sizeImg(100%, 50%, 0);
 }
 
 .heroSection {
     background-color: $viola;
+}
+
+.onlineFeed {
+    top: 70%;
+    right: 20%;
+}
+
+.bellCircle {
+    background-color: $viola;
+    top: 10%;
+    right: 10%;
 }
 
 .heroSection p {
@@ -66,14 +91,16 @@ del {
 .btn1 {
     @include buttonCustom($verde, $bianco, 15px, 5px, 0, 5px);
     font-weight: bold;
+    @include hoverCustom;
 }
 
 .btn2 {
     @include buttonCustom($bianco, $nero, 15px, 5px, 0, 5px);
     font-weight: bold;
+    @include hoverCustom;
 }
 
-main {
+main, footer {
     background-color: $backgr;
 }
 
@@ -108,8 +135,16 @@ span {
 
 .iconNav{
     background-color: $iconBk;
-    padding: 20px;
+    padding: 15px 20px;
     border-radius: 50%;
+    border: none;
+    font-weight: normal;
+    color: $grey;
+    font-size: 1.5em;
+}
+
+.backHr {
+    background-color: $backgr;
 }
 
 .btnNAv {
@@ -119,3 +154,8 @@ span {
 .ultimaLista  {
 margin-left: 20px;
 }
+
+.animazione { 
+    opacity: 1;
+    @include rotationMx(3s, linear, 0s, 1);
+   }
