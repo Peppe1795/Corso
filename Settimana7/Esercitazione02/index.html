@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <h1>Registrazione sono passati <span id="contatore">0</span> secondi</h1>
+    <form id="formReg">
+      <fieldset>
+        <label for="name">Nome</label>
+        <input type="text" id="nome" placeholder="Inserisci il tuo nome" />
+        <label for="name">Cognome</label>
+        <input
+          type="text"
+          id="cognome"
+          placeholder="Inserisci il tuo cognome"
+        />
+        <label for="name">Indirizzo</label>
+        <input
+          type="text"
+          id="indirizzo"
+          placeholder="Inserisci il tuo indirizzo"
+        />
+        <label for="name">telefono</label>
+        <input
+          type="tel"
+          id="telefono"
+          placeholder="Inserisci il tuo telefono"
+        />
+        <button type="submit" id="salva">SALVA</button>
+        <button id="rimuovi">RIMUOVI</button>
+      </fieldset>
+    </form>
+    <h2>Dati Salvati</h2>
+    <ul id="listaDati"></ul>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

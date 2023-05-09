@@ -51,5 +51,3 @@ const animali = new Animali();
         listanimali.appendChild(petDiv);
     }
 }
-
-const animale1 = new Pet ('Polly', 'Antonio', );
