@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+body {
+  font-family: "Pacifico", cursive;
+  background-color: #ffdc82;
+  box-sizing: border-box;
+}
+
+.topImg {
+  width: 60px;
+  background-image: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.dett {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.dett h2 {
+  font-family: "Pacifico", cursive;
+  color:  #232f3e;
+}
+
+.navCustom {
+  background-color: #232f3e;
+}
+
+.barra {
+  animation: progressBar 3s linear 1s 1;
+}
+
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+

@@ -22,16 +22,16 @@
 }
 
 @mixin rotationMx($durata, $velocita, $delay, $repeat, $fill){
-    @keyframes rotationM {
-        0% {
-          transform: rotate(360deg) scale(1.8);
-          opacity: 0;
-        }
-    
-        100% {
-          transform: rotate(0deg) scale(1);
-          opacity: 1;
-        }
+  @keyframes rotationM {
+      0% {
+        transform: rotate(360deg) scale(1.8);
+        opacity: 0;
       }
-      animation: rotationM $durata $velocita $delay $repeat $fill;
+  
+      100% {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+      }
+    }
+    animation: rotationM $durata $velocita $delay $repeat $fill;
 }
