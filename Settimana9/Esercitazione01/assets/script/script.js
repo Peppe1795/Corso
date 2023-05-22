@@ -26,10 +26,10 @@ var controlla = function () {
 var vincitore = function () {
     var randomNumer = Math.floor(Math.random() * (100 - 1) + 1);
     estratto.innerHTML = "".concat(randomNumer);
-    if (giocatore1 == randomNumer) {
+    if (giocatore1 === randomNumer) {
         risultato.innerHTML = "Giocatore1 ha indovinato il numero";
     }
-    else if (giocatore2 == randomNumer) {
+    else if (giocatore2 === randomNumer) {
         risultato.innerHTML = "Giocatore2 ha indovinato il numero";
     }
     else if (Math.abs(giocatore1 - randomNumer) < Math.abs(giocatore2 - randomNumer)) {
@@ -44,7 +44,6 @@ var vincitore = function () {
 btn.addEventListener("submit", function (event) {
     event.preventDefault();
     controlla();
-    vincitore();
 });
 resetto.addEventListener("click", function () {
     estratto.innerHTML = "";

@@ -23,12 +23,12 @@ const controlla = () => {
   }
 };
 
-const vincitore = (): void => {
+const vincitore = () => {
   let randomNumer: number = Math.floor(Math.random() * (100 - 1) + 1);
   estratto.innerHTML = `${randomNumer}`;
-  if (giocatore1 == randomNumer) {
+  if (giocatore1 === randomNumer) {
     risultato.innerHTML = "Giocatore1 ha indovinato il numero";
-  } else if (giocatore2 == randomNumer) {
+  } else if (giocatore2 === randomNumer) {
     risultato.innerHTML = "Giocatore2 ha indovinato il numero";
   } else if (
     Math.abs(giocatore1 - randomNumer) < Math.abs(giocatore2 - randomNumer)
@@ -46,7 +46,6 @@ const vincitore = (): void => {
 btn.addEventListener("submit", (event) => {
   event.preventDefault();
   controlla();
-  vincitore();
 });
 
 resetto.addEventListener("click", () => {
