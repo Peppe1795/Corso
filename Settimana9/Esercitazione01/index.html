@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Player Typescript</title>
+  </head>
+  <body>
+    <h1>Indovina il numero</h1>
+
+    <fieldset>
+      <form id="bottone">
+        <label for="giocatore1">Giocatore 1</label>
+        <input
+          id="giocatore1"
+          type="number"
+          placeholder="Inserisci un numero compreso tra 1 e 100"
+          required
+        />
+        <label for="giocatore2">Giocatore 2</label>
+        <input
+          id="giocatore2"
+          type="number"
+          placeholder="Inserisci un numero compreso tra 1 e 100"
+          required
+        />
+        <button type="submit">GOOD LUCK</button>
+        <button id="resetto" type="reset">RESET</button>
+      </form>
+    </fieldset>
+
+    <div id="numeroCasuale">
+      <h2>Numero estratto</h2>
+      <p id="estratto"></p>
+      <h2>Vincitore</h2>
+      <p id="risultato"></p>
+    </div>
+    <script src="./assets/script/script.js"></script>
+  </body>
+</html>
