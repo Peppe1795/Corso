@@ -34,7 +34,8 @@ var MotherAccount = /** @class */ (function () {
     };
     return MotherAccount;
 }());
-var contoMamma = new MotherAccount('Madre', 0, 25, 50, 10, 20);
+var contoMamma = new MotherAccount("Madre", 0, 25, 50, 10, 20);
+console.log(contoMamma);
 console.log(contoMamma.oneDeposit());
 console.log(contoMamma.twoDeposit());
 console.log(contoMamma.oneWithdraw());
@@ -68,7 +69,8 @@ var SonAccount = /** @class */ (function () {
     };
     return SonAccount;
 }());
-var ContoFiglio = new SonAccount('Figlio', 0, 50, 40, 25, 30);
+var ContoFiglio = new SonAccount("Figlio", 0, 50, 40, 25, 30);
+console.log(ContoFiglio);
 console.log(ContoFiglio.oneDeposit());
 console.log(ContoFiglio.twoDeposit());
 console.log(ContoFiglio.oneWithdraw());

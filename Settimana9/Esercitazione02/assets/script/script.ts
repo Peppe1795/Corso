@@ -13,7 +13,7 @@ class MotherAccount {
     _firstDraw: number,
     _secondDraw: number
   ) {
-    this.nomeUtente = _nomeUtente
+    this.nomeUtente = _nomeUtente;
     this.balanceinit = 0;
     this.firstDeposit = _firstDeposit;
     this.secondDeposit = _secondDeposit;
@@ -22,25 +22,33 @@ class MotherAccount {
   }
 
   oneDeposit() {
-    return `saldo conto di ${this.nomeUtente} aggiornato dopo primo deposito: € ${
+    return `saldo conto di ${
+      this.nomeUtente
+    } aggiornato dopo primo deposito: € ${
       this.balanceinit + this.firstDeposit
     }`;
   }
 
   twoDeposit() {
-    return `saldo conto di ${this.nomeUtente} aggiornato dopo secondo deposito: € ${
+    return `saldo conto di ${
+      this.nomeUtente
+    } aggiornato dopo secondo deposito: € ${
       this.balanceinit + this.firstDeposit + this.secondDeposit
     }`;
   }
 
   oneWithdraw() {
-    return `saldo conto di ${this.nomeUtente} aggiornato dopo primo prelievo: € ${
+    return `saldo conto di ${
+      this.nomeUtente
+    } aggiornato dopo primo prelievo: € ${
       this.balanceinit + this.firstDeposit + this.secondDeposit - this.firstDraw
     }`;
   }
 
   twoWithdraw() {
-    return `saldo conto di ${this.nomeUtente} aggiornato dopo secondo prelievo: € ${
+    return `saldo conto di ${
+      this.nomeUtente
+    } aggiornato dopo secondo prelievo: € ${
       this.balanceinit +
       this.firstDeposit +
       this.secondDeposit -
@@ -60,8 +68,8 @@ class MotherAccount {
   }
 }
 
-let contoMamma = new MotherAccount('Madre', 0, 25, 50, 10, 20);
-
+let contoMamma = new MotherAccount("Madre", 0, 25, 50, 10, 20);
+console.log(contoMamma);
 console.log(contoMamma.oneDeposit());
 console.log(contoMamma.twoDeposit());
 console.log(contoMamma.oneWithdraw());
@@ -83,7 +91,7 @@ class SonAccount {
     _firstDraw: number,
     _secondDraw: number
   ) {
-    this.nomeUtente = _nomeUtente
+    this.nomeUtente = _nomeUtente;
     this.balanceinit = 0;
     this.firstDeposit = _firstDeposit;
     this.secondDeposit = _secondDeposit;
@@ -92,25 +100,33 @@ class SonAccount {
   }
 
   oneDeposit() {
-    return `saldo conto di ${this.nomeUtente} aggiornato dopo primo deposito: € ${
+    return `saldo conto di ${
+      this.nomeUtente
+    } aggiornato dopo primo deposito: € ${
       this.balanceinit + this.firstDeposit
     }`;
   }
 
   twoDeposit() {
-    return `saldo conto di ${this.nomeUtente} aggiornato dopo secondo deposito: € ${
+    return `saldo conto di ${
+      this.nomeUtente
+    } aggiornato dopo secondo deposito: € ${
       this.balanceinit + this.firstDeposit + this.secondDeposit
     }`;
   }
 
   oneWithdraw() {
-    return `saldo conto di ${this.nomeUtente} aggiornato dopo primo prelievo: € ${
+    return `saldo conto di ${
+      this.nomeUtente
+    } aggiornato dopo primo prelievo: € ${
       this.balanceinit + this.firstDeposit + this.secondDeposit - this.firstDraw
     }`;
   }
 
   twoWithdraw() {
-    return `saldo conto di ${this.nomeUtente} aggiornato dopo secondo prelievo: € ${
+    return `saldo conto di ${
+      this.nomeUtente
+    } aggiornato dopo secondo prelievo: € ${
       this.balanceinit +
       this.firstDeposit +
       this.secondDeposit -
@@ -120,7 +136,8 @@ class SonAccount {
   }
 }
 
-let ContoFiglio = new SonAccount('Figlio', 0, 50, 40, 25, 30);
+let ContoFiglio = new SonAccount("Figlio", 0, 50, 40, 25, 30);
+console.log(ContoFiglio);
 console.log(ContoFiglio.oneDeposit());
 console.log(ContoFiglio.twoDeposit());
 console.log(ContoFiglio.oneWithdraw());
