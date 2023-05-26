@@ -38,5 +38,6 @@ background: linear-gradient(0deg, rgba(34,60,195,1) 0%, rgba(45,253,235,1) 100%)
 }
 
 .bottoni {
-    margin-top: 50.6%;
+    margin-top: 33%;
+    padding: 10px 0;
 }
