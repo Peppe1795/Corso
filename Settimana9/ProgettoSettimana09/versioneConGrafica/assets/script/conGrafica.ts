@@ -76,7 +76,7 @@ btn.addEventListener("submit", (event) => {
 });
 
 resetta.addEventListener("click", () => {
-  numeroChiamate2 = 0;
+  numeroChiamate2 = 1;
   numero = 0;
   riga.innerHTML = "";
   riga2.innerHTML = "";

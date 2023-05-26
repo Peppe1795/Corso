@@ -44,7 +44,7 @@ btn.addEventListener("submit", function (event) {
     return numero;
 });
 resetta.addEventListener("click", function () {
-    numeroChiamate2 = 0;
+    numeroChiamate2 = 1;
     numero = 0;
     riga.innerHTML = "";
     riga2.innerHTML = "";
