@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <div class="container telefono">
-        <div class="row ">
-    <h1 class="text-center mb-4">Chiama Direttamente dal web</h1>
-    <form id="form">
-    <div class="col-12 mb-3 d-flex align-items-center justify-content-center">
+    <div class="container telefono mt-1">
+        <h1 class="text-center mb-4">Chiama Direttamente dal web</h1>
+        <div class="row-fluid">
+     <form id="form" class="border border-dark rounded w-50">
+    <div class="col-12 mb-3 d-flex align-items-center justify-content-center mt-2">
     <label for="numero utente ">Il tuo numero</label>
     <input type="tel" id="numeroPersonale" placeholder="Inserisci il tuo numero" required>
 </div>
@@ -26,7 +26,8 @@
     <label for="ricarica ">Ricarica credito</label>
     <input type="number" id="ricarica" placeholder="Importo da ricaricare">
 </div>
-<div class="col-12 d-flex align-items-center justify-content-center">
+
+<div class="col-12 bottoni d-flex justify-content-center bg-dark ">
 <button class="bg-success p-2 border-0 rounded" type="button" id="chiama"><i class="bi bi-phone"></i> CHIAMA</button>
 <button  class="ms-4 bg-danger p-2 border-0 rounded" type="submit"><i class="bi bi-phone"></i> STACCA</button>
 <button class="ms-4 bg-warning p-2 border-0 rounded" type="reset" id="resetta"><i class="bi bi-x-circle"></i> RESET</button>

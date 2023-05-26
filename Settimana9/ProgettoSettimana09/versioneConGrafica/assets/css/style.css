@@ -8,7 +8,7 @@ body {
 
 input {
     background-color: transparent;
-    border: solid 1px black;
+    border: solid 1px white;
 }
 
 #numeroPersonale {
@@ -26,4 +26,16 @@ input {
 
 ul {
     list-style-type: none;
+}
+
+#form {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    background: rgb(34,60,195);
+background: linear-gradient(0deg, rgba(34,60,195,1) 0%, rgba(45,253,235,1) 100%);
+}
+
+.bottoni {
+    margin-top: 50.6%;
 }
