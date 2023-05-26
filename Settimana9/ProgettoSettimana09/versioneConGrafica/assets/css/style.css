@@ -1,0 +1,33 @@
+
+body {
+    background: rgb(131,58,180);
+    background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 66%, rgba(252,176,69,1) 100%);
+    color: white; 
+    font-weight: bold;
+} 
+
+input {
+    background-color: transparent;
+    border: solid 1px black;
+}
+
+#numeroPersonale {
+    margin-left: 52px;
+}
+
+#ricarica {
+    margin-left: 41px;
+}
+
+.telefono {
+    margin-top: 10%;
+    height: 50%;
+} 
+
+ul {
+    list-style-type: none;
+}
+
+.hide {
+visibility: hidden;
+}

@@ -1,4 +1,4 @@
-/*interface Smartphone {
+interface Smartphone {
   credito: number;
   numeroChiamate: number;
 
@@ -67,5 +67,5 @@ ThirdUser.getChiamata(35)
 console.log(`Il tuo ceredito residuo è di:  € ${ThirdUser.getNumero404()}`)
 console.log(`Hai effettuato ${ThirdUser.getNumeroChiamate()} chiamate`)
 ThirdUser.getAzzeraChiamate()
-console.log(`Chiamate azzerate = ${ThirdUser.getNumeroChiamate()}`)*/
+console.log(`Chiamate azzerate = ${ThirdUser.getNumeroChiamate()}`)
 
