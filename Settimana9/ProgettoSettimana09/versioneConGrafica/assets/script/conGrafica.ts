@@ -1,5 +1,3 @@
-
-
 let numeroDachiamare = document.getElementById(
   "numeroDachiamare"
 ) as HTMLInputElement;
@@ -42,19 +40,20 @@ class Utente2 implements Smartphone2 {
 
 let numero: number = 0;
 let numeroChiamate2 = 1;
+let intervallo: any;
+
 chiama.addEventListener("click", () => {
   riga.innerHTML = "";
-  riga2.classList.remove("hide");
-  setInterval((): number => {
-    numero++;
+  intervallo = setInterval((): number => {
     riga2.innerHTML = `Durata chiamata: ${numero}`;
+    numero++;
     return numero;
   }, 1000);
 });
 
 btn.addEventListener("submit", (event) => {
   event.preventDefault();
-  riga2.classList.add("hide");
+  clearInterval(intervallo);
   let FirstUser = new Utente2(50);
   const valoreRicarica: number = Number(ricarica?.value);
   const valorenum1: number = Number(numeroPersonale.value);
@@ -78,7 +77,9 @@ btn.addEventListener("submit", (event) => {
 
 resetta.addEventListener("click", () => {
   numeroChiamate2 = 0;
+  numero = 0;
   riga.innerHTML = "";
-  return numeroChiamate2;
+  riga2.innerHTML = "";
+  clearInterval(intervallo);
+  return numeroChiamate2 && numero;
 });
-

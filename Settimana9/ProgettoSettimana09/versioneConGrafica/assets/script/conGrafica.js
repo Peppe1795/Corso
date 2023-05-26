@@ -23,18 +23,18 @@ var Utente2 = /** @class */ (function () {
 }());
 var numero = 0;
 var numeroChiamate2 = 1;
+var intervallo;
 chiama.addEventListener("click", function () {
     riga.innerHTML = "";
-    riga2.classList.remove("hide");
-    setInterval(function () {
-        numero++;
+    intervallo = setInterval(function () {
         riga2.innerHTML = "Durata chiamata: ".concat(numero);
+        numero++;
         return numero;
     }, 1000);
 });
 btn.addEventListener("submit", function (event) {
     event.preventDefault();
-    riga2.classList.add("hide");
+    clearInterval(intervallo);
     var FirstUser = new Utente2(50);
     var valoreRicarica = Number(ricarica === null || ricarica === void 0 ? void 0 : ricarica.value);
     var valorenum1 = Number(numeroPersonale.value);
@@ -45,6 +45,9 @@ btn.addEventListener("submit", function (event) {
 });
 resetta.addEventListener("click", function () {
     numeroChiamate2 = 0;
+    numero = 0;
     riga.innerHTML = "";
-    return numeroChiamate2;
+    riga2.innerHTML = "";
+    clearInterval(intervallo);
+    return numeroChiamate2 && numero;
 });
