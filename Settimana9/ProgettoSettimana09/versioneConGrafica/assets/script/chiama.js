@@ -43,6 +43,21 @@ var numeroDaChiamare = document.getElementById("numeroDaChiamare");
 var url = "https://6471d9566a9370d5a41abe55.mockapi.io/api/tel/tasks/";
 var trovaAccount = new URLSearchParams(window.location.search);
 var id = trovaAccount.get("tasksId");
+var Utente3 = /** @class */ (function () {
+    function Utente3(_name, _surname, _telephone, _firstPhoneTopUp, _telephoneCredit, _numbersOfCalls, _lastCallDuration) {
+        this.name = _name;
+        this.surname = _surname;
+        this.telephone = _telephone;
+        this.firstPhoneTopUp = _firstPhoneTopUp;
+        this.telephoneCredit = _telephoneCredit;
+        this.numbersOfCalls = _numbersOfCalls;
+        this.lastCallDuration = _lastCallDuration;
+    }
+    Utente3.prototype.getRicarica = function (ricarica) {
+        this.telephoneCredit += ricarica;
+    };
+    return Utente3;
+}());
 function fetchData3() {
     return __awaiter(this, void 0, void 0, function () {
         var response, data_1, numero_1, numeroChiamate2_1, intervallo_1, error_1;
@@ -78,10 +93,45 @@ function fetchData3() {
                         event.preventDefault();
                         clearInterval(intervallo_1);
                         rigaCall2.innerHTML = "\n      <h2>Resconto Chiamata</h2>\n      <ul>\n            <li>Il tuo numero: ".concat(data_1.telephone, "</li>\n            <li>Numero chiamato: ").concat(numerochiamatoValue, "</li>  \n            <li>Credito Utente: &#8364 ").concat(data_1.telephoneCredit, "</li>\n            <li>Durata chiamata: ").concat(numero_1, "</li>\n            <li>Costo chiamata: &#8364 ").concat(numero_1 * 0.2, " </li>\n            <li>Numero chiamate: ").concat(numeroChiamate2_1++, "</li>\n            <li>Credito residuo dopo chiamata: &#8364 ").concat(data_1.telephoneCredit - numero_1 * 0.2, " </li>\n          </ul>");
+                        function modfica() {
+                            return __awaiter(this, void 0, void 0, function () {
+                                var User, response3, data3, error_2;
+                                return __generator(this, function (_a) {
+                                    switch (_a.label) {
+                                        case 0:
+                                            _a.trys.push([0, 3, , 4]);
+                                            User = new Utente3(data_1.name, data_1.surname, data_1.telephone, data_1.firstPhoneTopUp, data_1.telephoneCredit - numero_1 * 0.2, numeroChiamate2_1, numero_1);
+                                            return [4 /*yield*/, fetch(url + id, {
+                                                    method: "PUT",
+                                                    body: JSON.stringify(User),
+                                                    headers: {
+                                                        "Content-Type": "application/json",
+                                                    },
+                                                })];
+                                        case 1:
+                                            response3 = _a.sent();
+                                            if (!response3.ok) {
+                                                throw new Error("HTTP error! Status: ".concat(response3.status));
+                                            }
+                                            return [4 /*yield*/, response3.json()];
+                                        case 2:
+                                            data3 = _a.sent();
+                                            console.log("Data fetched", data3);
+                                            return [3 /*break*/, 4];
+                                        case 3:
+                                            error_2 = _a.sent();
+                                            console.log("Fetch Error:", error_2.message);
+                                            return [3 /*break*/, 4];
+                                        case 4: return [2 /*return*/];
+                                    }
+                                });
+                            });
+                        }
+                        modfica();
                         numero_1 = 0;
                         return numero_1;
                     });
-                    return [2 /*return*/, data_1.telephoneCredit - numero_1 * 0.2];
+                    return [3 /*break*/, 4];
                 case 3:
                     error_1 = _a.sent();
                     console.log("Fetch Error:", error_1.message);
@@ -94,7 +144,7 @@ function fetchData3() {
 fetchData3();
 function cancella() {
     return __awaiter(this, void 0, void 0, function () {
-        var response2, data2, error_2;
+        var response2, data2, error_3;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -116,8 +166,8 @@ function cancella() {
                     console.log("Delete completed", data2);
                     return [3 /*break*/, 4];
                 case 3:
-                    error_2 = _a.sent();
-                    console.log("Fetch Error:", error_2.message);
+                    error_3 = _a.sent();
+                    console.log("Fetch Error:", error_3.message);
                     return [3 /*break*/, 4];
                 case 4: return [2 /*return*/];
             }

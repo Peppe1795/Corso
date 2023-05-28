@@ -12,6 +12,48 @@ const url: any = "https://6471d9566a9370d5a41abe55.mockapi.io/api/tel/tasks/";
 const trovaAccount: any = new URLSearchParams(window.location.search);
 const id: any = trovaAccount.get("tasksId");
 
+interface Smartphone2 {
+  name: string;
+  surname: string;
+  telephone: number;
+  firstPhoneTopUp: number;
+  telephoneCredit: number;
+  numbersOfCalls: number;
+  lastCallDuration: number;
+
+  getRicarica(ricarica: number): void;
+}
+class Utente3 implements Smartphone2 {
+  name: string;
+  surname: string;
+  telephone: number;
+  firstPhoneTopUp: number;
+  telephoneCredit: number;
+  numbersOfCalls: number;
+  lastCallDuration: number;
+  constructor(
+    _name: string,
+    _surname: string,
+    _telephone: number,
+    _firstPhoneTopUp: number,
+    _telephoneCredit: number,
+    _numbersOfCalls: number,
+    _lastCallDuration: number
+  ) {
+    this.name = _name;
+    this.surname = _surname;
+    this.telephone = _telephone;
+    this.firstPhoneTopUp = _firstPhoneTopUp;
+    this.telephoneCredit = _telephoneCredit;
+    this.numbersOfCalls = _numbersOfCalls;
+    this.lastCallDuration = _lastCallDuration;
+  }
+
+  getRicarica(ricarica: number): void {
+    this.telephoneCredit += ricarica;
+  }
+}
+
 async function fetchData3(): Promise<any> {
   try {
     const response: any = await fetch(url + id);
@@ -47,8 +89,6 @@ async function fetchData3(): Promise<any> {
       }, 1000);
     });
 
-    
-
     stacca.addEventListener("submit", (event: any) => {
       let numerochiamatoValue = numeroDaChiamare.value;
       event.preventDefault();
@@ -66,12 +106,30 @@ async function fetchData3(): Promise<any> {
               data.telephoneCredit - numero * 0.2
             } </li>
           </ul>`;
+      async function modfica(): Promise<any> {
+        try {
+          const User = new Utente3(data.name, data.surname ,data.telephone, data.firstPhoneTopUp, data.telephoneCredit - numero * 0.2, numeroChiamate2, numero)
+          const response3: any = await fetch(url + id, {
+            method: "PUT",
+            body: JSON.stringify(User),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          });
+          if (!response3.ok) {
+            throw new Error(`HTTP error! Status: ${response3.status}`);
+          }
 
+          const data3: any = await response3.json();
+          console.log("Data fetched", data3);
+        } catch (error: any) {
+          console.log("Fetch Error:", error.message);
+        }
+      }
+      modfica();
       numero = 0;
       return numero;
     });
-
-    return data.telephoneCredit - numero * 0.2;
   } catch (error: any) {
     console.log("Fetch Error:", error.message);
   }
@@ -98,8 +156,6 @@ async function cancella(): Promise<any> {
   }
 }
 
-
-
 const btnCancella = document.getElementById("cancella") as HTMLButtonElement;
 
 btnCancella.addEventListener("click", () => {
@@ -107,4 +163,3 @@ btnCancella.addEventListener("click", () => {
     cancella();
   }
 });
-
