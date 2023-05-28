@@ -1,43 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
 body {
-    background: rgb(131,58,180);
-    background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 66%, rgba(252,176,69,1) 100%);
-    color: white; 
-    font-weight: bold;
-    font-family: 'Carter One', cursive;
-} 
-
-input {
-    background-color: transparent;
-    border: solid 1px white;
+  background: rgb(131, 58, 180);
+  background: radial-gradient(
+    circle,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 66%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  color: white;
+  font-weight: bold;
+  font-family: "Carter One", cursive;
 }
-
-#numeroPersonale {
-    margin-left: 52px;
-}
-
-#ricarica {
-    margin-left: 41px;
-}
-
-.telefono {
-    margin-top: 10%;
-    height: 50%;
-} 
 
 ul {
-    list-style-type: none;
-}
-
-#form {
-    width: 600px;
-    height: 400px;
-    margin: 0 auto;
-    background: rgb(34,60,195);
-background: linear-gradient(0deg, rgba(34,60,195,1) 0%, rgba(45,253,235,1) 100%);
-}
-
-.bottoni {
-    margin-top: 33%;
-    padding: 10px 0;
+  list-style-type: none;
 }

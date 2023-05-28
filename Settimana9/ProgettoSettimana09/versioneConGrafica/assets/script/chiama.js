@@ -34,43 +34,23 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var numeroDachiamare = document.getElementById("numeroDachiamare");
-var nome = document.getElementById("nome");
-var cognome = document.getElementById("cognome");
-var numeroPersonale = document.getElementById("numeroTelefono");
-var ricarica = document.getElementById("ricarica");
-var btn = document.getElementById("form");
-var riga = document.getElementById("riga");
-var resetta = document.getElementById("resetta");
-var riga2 = document.getElementById("riga2");
-var Utente2 = /** @class */ (function () {
-    function Utente2(_name, _surname, _telephone, _firstPhoneTopUp, _telephoneCredit, _numbersOfCalls, _lastCallDuration) {
-        this.name = _name;
-        this.surname = _surname;
-        this.telephone = _telephone;
-        this.firstPhoneTopUp = _firstPhoneTopUp;
-        this.telephoneCredit = _telephoneCredit;
-        this.numbersOfCalls = _numbersOfCalls;
-        this.lastCallDuration = _lastCallDuration;
-    }
-    Utente2.prototype.getRicarica = function (ricarica) {
-        this.telephoneCredit += ricarica;
-    };
-    return Utente2;
-}());
-btn.addEventListener("submit", function (event) {
-    event.preventDefault();
-    fetchPost();
-    alert('Account creato');
-});
-function fetchData() {
+var rigaDettagli = document.getElementById("details-container");
+var rigaCall = document.getElementById("rigaCall");
+var rigaCall2 = document.getElementById("rigaCall2");
+var stacca = document.getElementById("stacca");
+var chiama = document.getElementById("chiama");
+var numeroDaChiamare = document.getElementById("numeroDaChiamare");
+var url = "https://6471d9566a9370d5a41abe55.mockapi.io/api/tel/tasks/";
+var trovaAccount = new URLSearchParams(window.location.search);
+var id = trovaAccount.get("tasksId");
+function fetchData3() {
     return __awaiter(this, void 0, void 0, function () {
-        var response, data, error_1;
+        var response, data_1, numero_1, numeroChiamate2_1, intervallo_1, error_1;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 3, , 4]);
-                    return [4 /*yield*/, fetch("https://6471d9566a9370d5a41abe55.mockapi.io/api/tel/tasks")];
+                    return [4 /*yield*/, fetch(url + id)];
                 case 1:
                     response = _a.sent();
                     if (!response.ok) {
@@ -78,9 +58,30 @@ function fetchData() {
                     }
                     return [4 /*yield*/, response.json()];
                 case 2:
-                    data = _a.sent();
-                    console.log("Data fetched", data);
-                    return [3 /*break*/, 4];
+                    data_1 = _a.sent();
+                    console.log("Data fetched", data_1);
+                    rigaDettagli.innerHTML = " <div class=\"col-6 col-md-4 col-lg-3 mb-3 w-100\">\n        <h2 class='text-center m-4'> Dettagli Account selezionato </h2>\n          <ul class=\"list-group bg-warning\">\n          <li class=\"list-group-item bg-warning\">Nome: ".concat(data_1.name, "</li>\n          <li class=\"list-group-item bg-warning\">cognome: ").concat(data_1.surname, "</li>\n          <li class=\"list-group-item bg-warning\">Numero di telefono: ").concat(data_1.telephone, "</li>\n          <li class=\"list-group-item bg-warning\">Credito residuo:&#8364  ").concat(data_1.telephoneCredit, "</li>\n        </ul>\n          </div>");
+                    numero_1 = 0;
+                    numeroChiamate2_1 = 1;
+                    chiama.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        clearInterval(intervallo_1);
+                        rigaCall2.innerHTML = "";
+                        intervallo_1 = setInterval(function () {
+                            rigaCall.innerHTML = "Durata chiamata: ".concat(numero_1);
+                            numero_1++;
+                            return numero_1;
+                        }, 1000);
+                    });
+                    stacca.addEventListener("submit", function (event) {
+                        var numerochiamatoValue = numeroDaChiamare.value;
+                        event.preventDefault();
+                        clearInterval(intervallo_1);
+                        rigaCall2.innerHTML = "\n      <h2>Resconto Chiamata</h2>\n      <ul>\n            <li>Il tuo numero: ".concat(data_1.telephone, "</li>\n            <li>Numero chiamato: ").concat(numerochiamatoValue, "</li>  \n            <li>Credito Utente: &#8364 ").concat(data_1.telephoneCredit, "</li>\n            <li>Durata chiamata: ").concat(numero_1, "</li>\n            <li>Costo chiamata: &#8364 ").concat(numero_1 * 0.2, " </li>\n            <li>Numero chiamate: ").concat(numeroChiamate2_1++, "</li>\n            <li>Credito residuo dopo chiamata: &#8364 ").concat(data_1.telephoneCredit - numero_1 * 0.2, " </li>\n          </ul>");
+                        numero_1 = 0;
+                        return numero_1;
+                    });
+                    return [2 /*return*/, data_1.telephoneCredit - numero_1 * 0.2];
                 case 3:
                     error_1 = _a.sent();
                     console.log("Fetch Error:", error_1.message);
@@ -90,24 +91,19 @@ function fetchData() {
         });
     });
 }
-fetchData();
-function fetchPost() {
+fetchData3();
+function cancella() {
     return __awaiter(this, void 0, void 0, function () {
-        var valoreNome, valoreCognome, valoreRicarica, valorenum1, FirstUser, response2, data2, error_2;
+        var response2, data2, error_2;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 3, , 4]);
-                    valoreNome = nome.value;
-                    valoreCognome = cognome.value;
-                    valoreRicarica = Number(ricarica.value);
-                    valorenum1 = Number(numeroPersonale.value);
-                    FirstUser = new Utente2(valoreNome, valoreCognome, valorenum1, valoreRicarica, 0, 0, 0);
-                    FirstUser.getRicarica(valoreRicarica);
-                    return [4 /*yield*/, fetch("https://6471d9566a9370d5a41abe55.mockapi.io/api/tel/tasks", {
-                            method: "POST",
-                            body: JSON.stringify(FirstUser),
-                            headers: { "Content-Type": "application/json" },
+                    return [4 /*yield*/, fetch(url + id, {
+                            method: "DELETE",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
                         })];
                 case 1:
                     response2 = _a.sent();
@@ -117,7 +113,7 @@ function fetchPost() {
                     return [4 /*yield*/, response2.json()];
                 case 2:
                     data2 = _a.sent();
-                    console.log("Data fetched", data2);
+                    console.log("Delete completed", data2);
                     return [3 /*break*/, 4];
                 case 3:
                     error_2 = _a.sent();
@@ -128,3 +124,9 @@ function fetchPost() {
         });
     });
 }
+var btnCancella = document.getElementById("cancella");
+btnCancella.addEventListener("click", function () {
+    if (confirm("Sei sicuro di voler cancellare questo account?") == true) {
+        cancella();
+    }
+});

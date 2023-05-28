@@ -1,85 +1,111 @@
-let numeroDachiamare = document.getElementById(
+const numeroDachiamare = document.getElementById(
   "numeroDachiamare"
 ) as HTMLInputElement;
-let numeroPersonale = document.getElementById(
-  "numeroPersonale"
+const nome = document.getElementById("nome") as HTMLInputElement;
+const cognome = document.getElementById("cognome") as HTMLInputElement;
+const numeroPersonale = document.getElementById(
+  "numeroTelefono"
 ) as HTMLInputElement;
-let ricarica = document.getElementById("ricarica") as HTMLInputElement;
-let btn = document.getElementById("form") as HTMLButtonElement;
-let riga = document.getElementById("riga") as HTMLDivElement;
-let chiama = document.getElementById("chiama") as HTMLButtonElement;
-let resetta = document.getElementById("resetta") as HTMLButtonElement;
-let riga2 = document.getElementById("riga2") as HTMLDivElement;
+const ricarica = document.getElementById("ricarica") as HTMLInputElement;
+const btn = document.getElementById("form") as HTMLButtonElement;
+const riga = document.getElementById("riga") as HTMLDivElement;
+const resetta = document.getElementById("resetta") as HTMLButtonElement;
+const riga2 = document.getElementById("riga2") as HTMLDivElement;
 
 interface Smartphone2 {
-  credito: number;
+  name: string;
+  surname: string;
+  telephone: number;
+  firstPhoneTopUp: number;
+  telephoneCredit: number;
+  numbersOfCalls: number;
+  lastCallDuration: number;
 
-  getRicarica(ricarica: number): void;
-  getChiamata(durata: number): void;
-  getNumero404(): number;
+  getRicarica(ricarica: number): void 
 }
-
 class Utente2 implements Smartphone2 {
-  credito: number;
-  constructor(_credito: number) {
-    this.credito = _credito;
+  name: string;
+  surname: string;
+  telephone: number;
+  firstPhoneTopUp: number;
+  telephoneCredit: number;
+  numbersOfCalls: number;
+  lastCallDuration: number;
+  constructor(
+    _name: string,
+    _surname: string,
+    _telephone: number,
+    _firstPhoneTopUp: number,
+    _telephoneCredit: number,
+    _numbersOfCalls: number,
+    _lastCallDuration: number
+  ) {
+    this.name = _name;
+    this.surname = _surname;
+    this.telephone = _telephone;
+    this.firstPhoneTopUp = _firstPhoneTopUp;
+    this.telephoneCredit = _telephoneCredit;
+    this.numbersOfCalls = _numbersOfCalls;
+    this.lastCallDuration = _lastCallDuration;
   }
-
-  getRicarica(ricarica: number): number {
-    return (this.credito += ricarica);
-  }
-
-  getChiamata(durata: number): number {
-    return durata * 0.2;
-  }
-
-  getNumero404(): number {
-    return this.credito;
-  }
+  
+    getRicarica(ricarica: number): void {
+      this.telephoneCredit += ricarica;
+    }
+  
 }
 
-let numero: number = 0;
-let numeroChiamate2 = 1;
-let intervallo: any;
-
-chiama.addEventListener("click", () => {
-  riga.innerHTML = "";
-  intervallo = setInterval((): number => {
-    riga2.innerHTML = `Durata chiamata: ${numero}`;
-    numero++;
-    return numero;
-  }, 1000);
-});
 
 btn.addEventListener("submit", (event) => {
   event.preventDefault();
-  clearInterval(intervallo);
-  let FirstUser = new Utente2(50);
-  const valoreRicarica: number = Number(ricarica?.value);
-  const valorenum1: number = Number(numeroPersonale.value);
-  const valorenum2: number = Number(numeroDachiamare.value);
-  riga.innerHTML = `<ul>
-  <li>Il tuo numero: ${valorenum1}</li>
-  <li>Numero chiamato: ${valorenum2}</li>  
-  <li>Credito Utente: ${FirstUser.credito}</li>
-  <li>Importo ricarica: ${valoreRicarica}</li>
-<li>Credito dopo ricarica: ${FirstUser.getRicarica(valoreRicarica)}</li>
-  <li>Durata chiamata: ${numero}</li>
-  <li>Costo chiamata: ${FirstUser.getChiamata(numero)}</li>
-  <li>Numero chiamate: ${numeroChiamate2++}</li>
-  <li>Credito residuo dopo chiamata: ${
-    FirstUser.credito - FirstUser.getChiamata(numero)
-  }</li>
-</ul>`;
-  numero = 0;
-  return numero;
+ 
+fetchPost()
+
+alert('Account creato')
 });
 
-resetta.addEventListener("click", () => {
-  numeroChiamate2 = 1;
-  numero = 0;
-  riga.innerHTML = "";
-  riga2.innerHTML = "";
-  clearInterval(intervallo);
-  return numeroChiamate2 && numero;
-});
+async function fetchData(): Promise<any> {
+  try {
+    const response: any = await fetch(
+      "https://6471d9566a9370d5a41abe55.mockapi.io/api/tel/tasks"
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data: any = await response.json();
+    console.log("Data fetched", data);
+  } catch (error: any) {
+    console.log("Fetch Error:", error.message);
+  }
+}
+
+fetchData();
+
+async function fetchPost(): Promise<any> {
+  try {
+    const valoreNome: string = nome.value;
+    const valoreCognome: string = cognome.value;
+    const valoreRicarica: number = Number(ricarica.value);
+  const valorenum1: number = Number(numeroPersonale.value);
+    let FirstUser = new Utente2(valoreNome, valoreCognome, valorenum1, valoreRicarica, 0, 0, 0);
+    FirstUser.getRicarica(valoreRicarica);
+    const response2: any = await fetch(
+      "https://6471d9566a9370d5a41abe55.mockapi.io/api/tel/tasks",
+      {
+        method: "POST",
+        body: JSON.stringify(FirstUser),
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+    if (!response2.ok) {
+      throw new Error(`HTTP error! Status: ${response2.status}`);
+    }
+
+    const data2: any = await response2.json();
+    console.log("Data fetched", data2);
+  } catch (error: any) {
+    console.log("Fetch Error:", error.message);
+  }
+}
+
