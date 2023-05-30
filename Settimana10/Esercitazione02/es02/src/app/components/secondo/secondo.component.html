@@ -1,0 +1,12 @@
+<h2 class="text-danger mb-3">Post non attivi</h2>
+<div *ngFor="let i of posts ">
+  <div *ngIf="!i.active">
+  <div class="card" >
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item sfondoT">Titolo: {{i.title}}</li>
+      <li class="list-group-item sfondoD">Descrizione: {{i.body}}</li>
+      <li class="list-group-item sfondo">Id: {{i.id}}</li>
+    </ul>
+  </div>
+</div>
+</div>
