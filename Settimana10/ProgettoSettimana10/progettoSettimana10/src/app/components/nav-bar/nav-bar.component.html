@@ -1,0 +1,25 @@
+<nav class="navbar bg-warning mb-5">
+  <div class="container-fluid d-flex justify-content-center">
+    <ul class="nav">
+      <li>
+        <a
+          class="nav-link"
+          aria-current="page"
+          [routerLink]="['/']"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          ><h2>Todos</h2></a
+        >
+      </li>
+      <li>
+        <a
+          class="nav-link ms-5 f"
+          aria-current="page"
+          [routerLink]="['/completed']"
+          routerLinkActive="active"
+          ><h2>Completati</h2></a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

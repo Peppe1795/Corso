@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-6" *ngIf="entryMex">
+    <h2>Caricamento Attendi...</h2>
+  </div>
+  <div class="col-6 spinner-border text-dark" role="status" *ngIf="entryMex">
+    <span class="visually-hidden text-primary"></span>
+  </div>
+
+  <div
+    *ngIf="!entryMex"
+    class="col-12 d-flex justify-content-center align-items-center mb-5"
+  >
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Inserisci Task"
+        aria-label="Inserisci Task"
+        aria-describedby="button-addon2"
+        [(ngModel)]="nuovaTask"
+      />
+      <button class="btn btn-outline-dark" type="button" (click)="addTask()">
+        AGGIUNGI
+      </button>
+    </div>
+  </div>
+
+  <div class="col-12">
+    <ul class="list-unstyled fw-bold text-center" *ngFor="let item of todoList">
+      <li *ngIf="!item.completed">
+        {{ item.title }}
+        <button type="button" class="btn btn-danger" (click)="deleteTask(item)">
+          <i class="bi bi-trash-fill"></i>
+        </button>
+        <button
+          type="button"
+          class="btn btn-success"
+          (click)="completedTask(item)"
+        >
+          <i class="bi bi-check-lg"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
