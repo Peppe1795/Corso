@@ -1,12 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import {
-    FormBuilder,
-    FormControl,
-    FormGroup,
-    Validators,
-    FormArray,
-} from '@angular/forms';
 
 @Component({
     selector: 'app-root',
@@ -26,14 +19,9 @@ export class AppComponent {
         planet: '',
         weakness: '',
     };
-    constructor(private fb: FormBuilder) {}
+    constructor() {}
 
     ngOnInit(): void {
-        /*this.formContainer = this.fb.group({heroForm: this.fb.group({
-    enemy: this.fb.control('', [Validators.maxLength(10)]),
-    planet: this.fb.control(null, [Validators.minLength(5)])
-})})*/
-
         this.formContainer.statusChanges?.subscribe((status) => {
             console.log(this.formContainer);
             console.log(`Stato from: ${status}`);
