@@ -1,1 +1,15 @@
-<p>singin works!</p>
+<form #form="ngForm" (ngSubmit)="registra(form)">
+  <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label text-white">Nome</label>
+    <input type="text" class="form-control" required ngModel id="name" name="name" placeholder="Inserisci il tuo nome">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label text-white">Email</label>
+    <input type="email" class="form-control" required ngModel id="email" name="email" placeholder="Inserisci l'email">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label text-white">Password</label>
+    <input type="password" class="form-control" required ngModel id="password" name="password" placeholder="Inserisci password">
+  </div>
+  <button class="btn btn-danger" type="submit">REGISTRATI</button>
+  </form>

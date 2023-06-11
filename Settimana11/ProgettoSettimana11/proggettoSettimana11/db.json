@@ -29,6 +29,18 @@
       "password": "$2a$10$dUc3jYtuRxxmnln0QZn.ZeJPDfdXmW/QCPKLmVJ31FiOXe1wZoir2",
       "name": "Gabriel",
       "id": 5
+    },
+    {
+      "email": "pe@pe.com",
+      "password": "$2a$10$jzGb1.ggpzmYLfqsz96OOO2Qm5CRTuixzE7Fr3Srj8SuhSMBOrhbq",
+      "name": "pep",
+      "id": 6
+    },
+    {
+      "email": "ttt@ff.com",
+      "password": "$2a$10$E0ertG1zzy3gd77Xhist4upyaNzvKzAnWztNCol9.Twqg17uVHd.y",
+      "name": "ttt",
+      "id": 7
     }
   ],
   "favorites": [

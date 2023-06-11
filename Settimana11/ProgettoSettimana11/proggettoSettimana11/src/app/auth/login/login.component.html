@@ -1,15 +1,11 @@
-<form>
+<form #form="ngForm" (ngSubmit)="accedi(form)">
 <div class="mb-3">
-  <label for="formGroupExampleInput" class="form-label text-white">Nome</label>
-  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Inserisci il tuo nome">
+  <label for="formGroupExampleInput2" class="form-label text-white">Email</label>
+  <input type="email" class="form-control" required ngModel id="name" name="name" placeholder="Inserisci l'email">
 </div>
 <div class="mb-3">
   <label for="formGroupExampleInput2" class="form-label text-white">Email</label>
-  <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="Inserisci l'email">
+  <input type="password" class="form-control"  required ngModel id="password" name="password" placeholder="Inserisci password">
 </div>
-<div class="mb-3">
-  <label for="formGroupExampleInput2" class="form-label text-white">Email</label>
-  <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Inserisci password">
-</div>
-<button class="btn btn-danger">LOGIN</button>
+<button class="btn btn-danger" type="submit">LOGIN</button>
 </form>
