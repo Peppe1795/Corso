@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth.service';
+import { FilmService } from 'src/app/service/film.service';
+
 
 @Component({
   selector: 'app-profile',

@@ -11,10 +11,15 @@ import { LoginComponent } from './auth/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MoviesComponent } from './components/movies/movies.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Route[] = [
   {
-    path: "",
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: "login",
    component: LoginComponent
   },
   {
@@ -40,7 +45,8 @@ const routes: Route[] = [
     LoginComponent,
     NavbarComponent,
     MoviesComponent,
-    ProfileComponent
+    ProfileComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule, RouterModule.forRoot(routes), HttpClientModule, FormsModule
