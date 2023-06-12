@@ -83,6 +83,18 @@
       "password": "$2a$10$4ajPkjqDBsO2T.4UrC0fY./3rOORdrGpIkzoawPHBbn.hPlEBFADa",
       "name": "anto",
       "id": 14
+    },
+    {
+      "email": "pepe@gmail.com",
+      "password": "$2a$10$Qy.lDfJTg43dnMCtBuoc.O5Jx6xNacuOIEIIff2sbDLxxs6CwKMkm",
+      "name": "peppe",
+      "id": 15
+    },
+    {
+      "email": "hh@h.com",
+      "password": "$2a$10$.ln83QWuLdASVF9KVRBXo.usIaPyDpxJX01wjFpZil3UxR8P4UJ0i",
+      "name": "gg",
+      "id": 16
     }
   ],
   "favorites": [

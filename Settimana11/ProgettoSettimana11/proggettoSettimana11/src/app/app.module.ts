@@ -29,13 +29,13 @@ const routes: Route[] = [
   {
     path: "movies",
    component: MoviesComponent,
-   //canActivate: [AuthGuard]
+   canActivate: [AuthGuard]
 
   },
   {
     path: "profile",
    component: ProfileComponent,
-   //canActivate: [AuthGuard]
+   canActivate: [AuthGuard]
   }
 ]
 @NgModule({
