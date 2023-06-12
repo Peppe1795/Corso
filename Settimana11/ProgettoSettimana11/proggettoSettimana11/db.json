@@ -41,6 +41,48 @@
       "password": "$2a$10$E0ertG1zzy3gd77Xhist4upyaNzvKzAnWztNCol9.Twqg17uVHd.y",
       "name": "ttt",
       "id": 7
+    },
+    {
+      "email": "pe@p.com",
+      "password": "$2a$10$9vt0Uai2n925dbfXShsnv.UcsIWUPvyoE.FZeXRcv8vAe9NydbqJ6",
+      "name": "pepp",
+      "id": 8
+    },
+    {
+      "email": "aa@a.com",
+      "password": "$2a$10$MljjYdkGGZchaXoKU6Yvk.W1VKRdGo.AIejEN1.AI5T7frLP0m0P2",
+      "name": "peppe",
+      "id": 9
+    },
+    {
+      "email": "pe@s.com",
+      "password": "$2a$10$dQcElOHPHkz7vulbd.9Pqu1pF4e2Xop8Y77G0WBq2gCUQsqUtyUIe",
+      "name": "pe",
+      "id": 10
+    },
+    {
+      "email": "olly@hotmail.it",
+      "password": "$2a$10$Kaoly5rQxnWy5xPj4ss9LOMd3CI/6KNaAn1zNrsy4ozfBUEfZVpYW",
+      "name": "only",
+      "id": 11
+    },
+    {
+      "email": "luca@gmail.com",
+      "password": "$2a$10$tcufvjF0aArcplHLY47xBepExb41beFVagNqNKSgHCbtXw9vJeIlC",
+      "name": "luca",
+      "id": 12
+    },
+    {
+      "email": "ciao@gmail.com",
+      "password": "$2a$10$aFH8F8E/lttAuLq495fqRed3GmLrywa8ot.5cS42vSWDYgx54inr2",
+      "name": "ppp",
+      "id": 13
+    },
+    {
+      "email": "bell@hotmail.com",
+      "password": "$2a$10$4ajPkjqDBsO2T.4UrC0fY./3rOORdrGpIkzoawPHBbn.hPlEBFADa",
+      "name": "anto",
+      "id": 14
     }
   ],
   "favorites": [
@@ -103,6 +145,21 @@
       "userId": 5,
       "movieId": 460465,
       "id": 16
+    },
+    {
+      "userId": 8,
+      "movieId": 567189,
+      "id": 17
+    },
+    {
+      "userId": 8,
+      "movieId": 460465,
+      "id": 18
+    },
+    {
+      "userId": 8,
+      "movieId": 578701,
+      "id": 19
     }
   ],
   "genres": [

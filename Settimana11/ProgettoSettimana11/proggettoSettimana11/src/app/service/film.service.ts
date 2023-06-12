@@ -18,6 +18,16 @@ export class FilmService {
   getMovies(): any {
     return this.http.get(this.jsonURL);
   }
+  getFavorites() {
+    return this.http.get<Favoriti[]>('http://localhost:4201/favorites');
+  }
 
+  aggiungiFavorites(data: Favoriti) {
+    return this.http.post<Favoriti>('http://localhost:4201/favorites', data);
+  }
+
+  eliminaFavorites(favoriteID: number) {
+    return this.http.delete(`http://localhost:4201/favorites/${favoriteID}`);
+  }
 
 }

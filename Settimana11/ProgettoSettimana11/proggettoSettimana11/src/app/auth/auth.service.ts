@@ -22,20 +22,17 @@ export class AuthService {
     constructor(private http: HttpClient, private router: Router) {}
 
     login(data: { email: string; password: string }) {
-        return this.http.post<Data>(`${this.baseURL}login`, data).pipe(
-
-            tap((data) => {
-                console.log(data);
-                this.authSubj.next(data);
-                this.utente = data;
-                console.log(this.utente);
-                localStorage.setItem('user', JSON.stringify(data));
-                this.autoLogout(data);
-            }),
-            catchError(this.errors)
-        );
+      return this.http.post<Data>(`${this.baseURL}login`, data).pipe(
+        tap((data) => {
+          this.authSubj.next(data);
+          this.utente = data;
+          console.log(this.utente);
+          localStorage.setItem('user', JSON.stringify(data));
+          this.autoLogout(data);
+        }),
+        catchError(this.errors)
+      );
     }
-
     restore() {
 
         const user = localStorage.getItem('user');
@@ -63,7 +60,7 @@ export class AuthService {
     logout() {
         this.authSubj.next(null);
         localStorage.removeItem('user');
-        this.router.navigate(['/']);
+        this.router.navigate(['/login']);
         if (this.timeoutLogout) {
 
             clearTimeout(this.timeoutLogout);
@@ -95,5 +92,14 @@ export class AuthService {
                 return throwError('Errore nella chiamata');
                 break;
         }
+    }
+
+    getCurrentUserId(): number | null {
+      const user = localStorage.getItem('user');
+      if (user) {
+        const userData: Data = JSON.parse(user);
+        return userData.user.id;
+      }
+      return null;
     }
 }

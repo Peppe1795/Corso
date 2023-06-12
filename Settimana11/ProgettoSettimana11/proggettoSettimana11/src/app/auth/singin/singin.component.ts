@@ -22,7 +22,7 @@ export class SinginComponent implements OnInit {
         console.log(form.value);
         try {
             this.authSrv.signup(form.value).subscribe();
-            this.router.navigate(['/']);
+            this.router.navigate(['/login']);
             this.isLoading = false
         } catch (error: any) {
             console.error(error);

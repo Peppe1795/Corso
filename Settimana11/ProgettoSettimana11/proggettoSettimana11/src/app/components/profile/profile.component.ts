@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
-import { FilmService } from 'src/app/service/film.service';
+import { Data } from 'src/app/auth/data.interface';
 
 
 @Component({
@@ -9,10 +9,16 @@ import { FilmService } from 'src/app/service/film.service';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-
-  constructor() { }
+user!: Data
+  constructor(private authSrv: AuthService) { }
 
   ngOnInit(): void {
+    const userString = localStorage.getItem('user');
+  if (userString) {
+    this.user = JSON.parse(userString);
+  }
   }
 
-}
+  }
+
+
