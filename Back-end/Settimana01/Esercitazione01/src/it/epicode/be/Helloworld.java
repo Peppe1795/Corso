@@ -71,7 +71,7 @@ return Arrays.toString(nuovoArray);
 }
 
 public static double perimetro(double j, double s) {
-	return (j * 2) * (s * 2);
+	return (j + s)* 2;
 }
 
 public static int modulo(int d) {
